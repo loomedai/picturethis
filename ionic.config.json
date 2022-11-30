@@ -1,0 +1,7 @@
+{
+  "name": "picturethis",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
