@@ -14,10 +14,15 @@ app.use(bodyparser.json());
 // database connection
 
 const db = mysql.createConnection({
-    host:'remotemysql.com',
-    user: 'YV7hmbfNlq',
-    password: 'y14XO122ar',
-    database: 'YV7hmbfNlq',
+
+    host:'localhost',
+    user:'root',
+    password:'',
+    database:'solutionsdb',
+ //   host:'remotemysql.com',
+ //   user: 'YV7hmbfNlq',
+ //   password: 'y14XO122ar',
+ //   database: 'YV7hmbfNlq',
     port: 3306
 });
 
@@ -42,9 +47,20 @@ app.get('/posts',(req,res)=>{
             console.log(err,'errs')
         }
 
+        if(result.length>0)
+        {
+            res.send({
+                message:'all user data',
+                data:result
+            })
+        }
+
     });
 })
 
+app.get('/posts/:id',(req,res)=>{
+    
+})
 
 
 
