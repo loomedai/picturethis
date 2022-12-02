@@ -33,7 +33,16 @@ db.connect(err=>{
 
 app.get('/posts',(req,res)=>{
 
-    console.log('this is the data I am looking for');
+    let qr = `select * from posts`;
+
+    db.query(qr,(err,result)=>{
+
+        if(err)
+        {
+            console.log(err,'errs')
+        }
+
+    });
 })
 
 
