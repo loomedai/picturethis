@@ -58,9 +58,11 @@ app.get('/posts',(req,res)=>{
     });
 })
 
-app.get('/posts/:id',(req,res)=>{
-    
-})
+app.get('/posts/:pID',(req,res)=>{
+
+    console.log('get single data by id');
+
+});
 
 
 
