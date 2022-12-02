@@ -1,0 +1,28 @@
+img{
+  width:100%;
+  height:100%;
+  
+}
+
+
+
+.myOverlay{
+    margin: 0px 140px 0px 140px;
+    width: 100%;
+    position: absolute;
+    z-index: 99;
+    top: 40%;
+    color: #fff;
+    max-width: 1180px;
+
+    
+    h1 {
+        font-size: 100px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+    p{
+        font-size: 32px;
+    }
+}
+
