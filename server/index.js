@@ -38,9 +38,9 @@ db.connect(err=>{
 
 app.get('/posts',(req,res)=>{
 
-    let qr = `select * from posts`;
+    let qry = `select * from posts`;
 
-    db.query(qr,(err,result)=>{
+    db.query(qry,(err,result)=>{
 
         if(err)
         {
@@ -62,7 +62,20 @@ app.get('/posts/:id',(req,res)=>{
 
     let pID = req.params.id;
 
-    let qr = `select * from posts where id = ${pID}`;
+    let qry = `select * from posts where id = ${pID}`;
+
+    db.query(qry,(err,result)=>{
+
+        if(err) {console.log(err);}
+
+        if(result.length>0)
+        {
+            res.send({
+                message: 'get single data from id',
+                data:result
+            });
+        }
+    })
 
     console.log(req.params.id,'get id ==>');
 
