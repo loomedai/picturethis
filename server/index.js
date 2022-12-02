@@ -58,9 +58,13 @@ app.get('/posts',(req,res)=>{
     });
 })
 
-app.get('/posts/:pID',(req,res)=>{
+app.get('/posts/:id',(req,res)=>{
 
-    console.log('get single data by id');
+    let pID = req.params.id;
+
+    let qr = `select * from posts where id = ${pID}`;
+
+    console.log(req.params.id,'get id ==>');
 
 });
 
