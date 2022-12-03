@@ -1,3 +1,8 @@
 ion-toolbar {
-    --background: transparent;
+    --background: rgba(0, 0, 0, 0.6);
 }
+@media screen and (max-width: 992px) {
+    ion-toolbar {
+      display: none;
+    }
+  }
