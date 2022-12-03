@@ -85,10 +85,32 @@ app.get('/posts/:id',(req,res)=>{
 
 });
 
+// create post
 
 app.post('/posts',(req,res)=>{
 
-console.log('postdata');
+    console.log(req.body,'createpost');
+
+    let title = req.body.title;
+    let descr = req.body.description;
+    let img = req.body.img;
+
+    let qry = `insert into posts(title,description,img) values("${title}","${descr}","${img}")`;
+
+    db.query(qry,(err,result)=>{
+
+        if(err){console.log(err);}
+        console.log(result,'result')
+        res.send({
+            message:'data has been send with new if statement'
+        })
+
+    });
+
+})
+
+// Update post. for update we use put
+app.put('/posts',(req,res)=>{
 
 })
 
