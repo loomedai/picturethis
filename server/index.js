@@ -75,12 +75,22 @@ app.get('/posts/:id',(req,res)=>{
                 data:result
             });
         }
+        else 
+        {
+            res.send({
+                message:'data not available'
+            });
+        }
     })
-
-    console.log(req.params.id,'get id ==>');
 
 });
 
+
+app.post('/posts',(req,res)=>{
+
+console.log('postdata');
+
+})
 
 
 
