@@ -109,12 +109,47 @@ app.post('/posts',(req,res)=>{
 
 })
 
-// Update post. for update we use put
-app.put('/posts',(req,res)=>{
+// Update a single post. for update we use put
+app.put('/posts/:id',(req,res)=>{
+
+    console.log(req.body,'updatepost');
+
+    let pID = req.params.id
+    let title = req.body.title;
+    let descr = req.body.description;
+    let img = req.body.img;
+
+    let qry = `update posts set title = "${title}", description = "${descr}", img = "${img}" where id = ${pID}`;
+
+    db.query(qry,(err,result)=>{
+
+        if(err) {console.log(err);}
+
+        res.send({
+            message:'post updated'
+        });
+
+    });
 
 })
 
+// delete a pos
+app.delete('/posts/:id',(req,res)=>{
 
+    let pID = req.params.id;
+
+    let qry = `delete from posts where id = "${pID}"`;
+    db.query(qry,(err,result)=>{
+        if(err) {console.log(err);}
+
+        res.send(
+            {
+                message:'post deleted'
+            }
+        )
+
+    });
+})
 
 app.listen(3000,() => {
     console.log("Server is still running :");
