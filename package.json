@@ -64,5 +64,14 @@
     "ts-node": "~8.3.0",
     "typescript": "~4.8.4"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loomedai/picturethis.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loomedai/picturethis/issues"
+  }
 }
