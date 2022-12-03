@@ -133,7 +133,7 @@ app.put('/posts/:id',(req,res)=>{
 
 })
 
-// delete a pos
+// delete a post
 app.delete('/posts/:id',(req,res)=>{
 
     let pID = req.params.id;
