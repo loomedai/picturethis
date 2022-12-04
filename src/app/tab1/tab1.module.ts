@@ -7,6 +7,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { NavbarComponent } from '../homepagecomponents/navbar/navbar.component';
 import { HomepostComponent } from '../homepagecomponents/homepost/homepost.component';
 import { HeroheaderComponent } from '../homepagecomponents/heroheader/heroheader.component';
+import { LeaderboardComponent } from '../homepagecomponents/leaderboard/leaderboard.component';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
 @NgModule({
@@ -17,6 +18,6 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
   ],
-  declarations: [Tab1Page, NavbarComponent, HomepostComponent, HeroheaderComponent]
+  declarations: [Tab1Page, NavbarComponent, HomepostComponent, HeroheaderComponent, LeaderboardComponent]
 })
 export class Tab1PageModule {}
