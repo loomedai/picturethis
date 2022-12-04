@@ -6,3 +6,10 @@ ion-toolbar {
       display: none;
     }
   }
+
+ion-button {
+  --background: none;
+  --background-activated: none;
+  --box-shadow: none;
+  text-transform: none;
+}
