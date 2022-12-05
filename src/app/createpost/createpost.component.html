@@ -1,0 +1,56 @@
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large" class="pt-8">Make a post</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+
+
+<ion-grid class="mt-28">
+  <form class="px-7 sm:px-20">
+    <ion-grid class="">
+      <ion-item fill="solid">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" ngModel email></ion-input>
+        <ion-note slot="helper">Enter a valid email</ion-note>
+        <ion-note slot="error">Invalid email</ion-note>
+      </ion-item>
+
+    </ion-grid>
+    <ion-grid class="">
+      <ion-row class="pb-5">
+        <ion-col size="6" class="">
+          <ion-item fill="solid">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" ngModel email></ion-input>
+            <ion-note slot="helper">Enter a valid email</ion-note>
+            <ion-note slot="error">Invalid email</ion-note>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="">
+      <ion-row class="flex">
+        <ion-col>
+          <ion-text>
+            <ion-title class="p-0">Image URL</ion-title>
+          </ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="pb-5">
+        <ion-col size="6" class="">
+          <ion-textarea
+            formControlName="image"
+            expand="block"
+            fill="outline"
+            class=" rounded"
+            placeholder="Der skal stå noget her"
+          ></ion-textarea>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-grid>
+
+</ion-content>

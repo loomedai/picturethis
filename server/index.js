@@ -19,18 +19,18 @@ const db = mysql.createConnection({
     user:'root',
     password:'',
     database:'solutionsdb',
- //   host:'remotemysql.com',
- //   user: 'YV7hmbfNlq',
- //   password: 'y14XO122ar',
- //   database: 'YV7hmbfNlq',
-    port: 3306
+ //     host:'remotemysql.com',
+ //     user: 'YV7hmbfNlq',
+ //     password: 'y14XO122ar',
+ //     database: 'YV7hmbfNlq',
+      port: 3306
 });
  
 // check database connection 
 
 db.connect(err=>{
     if (err){console.log(err,'dberr');}
-    console.log('solutionsdb is connected');
+    console.log('YV7hmbfNlq is connected');
 })
 
 
@@ -108,6 +108,9 @@ app.post('/posts',(req,res)=>{
     });
 
 })
+
+// create user?? skal vi have det?
+
 
 // Update a single post. for update we use put
 app.put('/posts/:id',(req,res)=>{
