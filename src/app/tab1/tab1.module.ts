@@ -8,15 +8,17 @@ import { NavbarComponent } from '../homepagecomponents/navbar/navbar.component';
 import { HomepostComponent } from '../homepagecomponents/homepost/homepost.component';
 import { HeroheaderComponent } from '../homepagecomponents/heroheader/heroheader.component';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { FooterComponent } from "../homepagecomponents/footer/footer.component";
 
 @NgModule({
-  imports: [
-    IonicModule,
-    CommonModule,
-    FormsModule,
-    ExploreContainerComponentModule,
-    Tab1PageRoutingModule,
-  ],
-  declarations: [Tab1Page, NavbarComponent, HomepostComponent, HeroheaderComponent]
+    declarations: [Tab1Page, NavbarComponent, HomepostComponent, HeroheaderComponent,FooterComponent],
+    imports: [
+        IonicModule,
+        CommonModule,
+        FormsModule,
+        ExploreContainerComponentModule,
+        Tab1PageRoutingModule,
+        
+    ]
 })
 export class Tab1PageModule {}

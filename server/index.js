@@ -25,7 +25,7 @@ const db = mysql.createConnection({
  //   database: 'YV7hmbfNlq',
     port: 3306
 });
-
+ 
 // check database connection 
 
 db.connect(err=>{
