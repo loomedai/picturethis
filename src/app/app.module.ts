@@ -10,10 +10,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { ApiService } from './api/api.service';
 
 import { ProfilepageComponent } from './logged-in/profilepage/profilepage.component';
-
+import { ReadComponent } from './read/read.component';
 
 @NgModule({
-  declarations: [AppComponent, ProfilepageComponent],
+  declarations: [AppComponent, ProfilepageComponent, ReadComponent],
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [ApiService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
