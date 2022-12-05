@@ -9,11 +9,11 @@ import { AppComponent } from './app.component';
 
 
 
-
+import { ProfilepageComponent } from './logged-in/profilepage/profilepage.component';
 
 
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent, ProfilepageComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
