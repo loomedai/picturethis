@@ -15,14 +15,14 @@ app.use(bodyparser.json());
 
 const db = mysql.createConnection({
 
- //   host:'localhost',
- //   user:'root',
- //   password:'',
- //   database:'solutionsdb',
-      host:'remotemysql.com',
-      user: 'YV7hmbfNlq',
-      password: 'y14XO122ar',
-      database: 'YV7hmbfNlq',
+    host:'localhost',
+    user:'root',
+    password:'',
+    database:'solutionsdb',
+ //     host:'remotemysql.com',
+ //     user: 'YV7hmbfNlq',
+ //     password: 'y14XO122ar',
+ //     database: 'YV7hmbfNlq',
       port: 3306
 });
 

@@ -13,7 +13,7 @@ const routes: Routes = [
     path:'read',component:ReadComponent    
 },
 {
-  path:'creatpost',component:CreatepostComponent
+  path:'createpost',component:CreatepostComponent
 },
 ];
 
