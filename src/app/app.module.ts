@@ -12,11 +12,11 @@ import { ApiService } from './api/api.service';
 
 
 
-
+import { ProfilepageComponent } from './logged-in/profilepage/profilepage.component';
 
 
 @NgModule({
-  declarations: [AppComponent,],
+  declarations: [AppComponent, ProfilepageComponent],
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [ApiService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
