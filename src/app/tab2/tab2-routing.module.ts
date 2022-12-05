@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Tab2Page } from './tab2.page';
 import {ReadComponent} from '../read/read.component'
+import { CreatepostComponent } from '../createpost/createpost.component';
 
 const routes: Routes = [
   {
@@ -9,8 +10,10 @@ const routes: Routes = [
     component: Tab2Page,
   },
   {
-    path:'read',component:ReadComponent
-    
+    path:'read',component:ReadComponent    
+},
+{
+  path:'creatpost',component:CreatepostComponent
 },
 ];
 

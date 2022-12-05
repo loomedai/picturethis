@@ -9,7 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path:'creatpost',component:CreatepostComponent
+    path:'createpost',component:CreatepostComponent
   },
   {
     path:'read',component:ReadComponent
