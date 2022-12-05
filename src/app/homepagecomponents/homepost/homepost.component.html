@@ -25,25 +25,21 @@
     <img src="" alt="" srcset="">
   </ion-row>
  <!--first post row-->
-  <ion-row class=" md:px-10 lg:px-44">
-    <ion-col size="12" size-lg="4">
+
+  <ion-row  class=" md:px-10 lg:px-44">
+    <ion-col *ngFor="let post of readData" size="12" size-lg="4">
       <ion-card>
         <ion-card-header>
           <ion-grid>
           <ion-row>
           <ion-col size="12" size-xl="2">
-          <img class="frontpageprofileimg" alt="John Doe" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+          <img class="" />
           </ion-col>
           <ion-col class="ion-align-self-center" size="10">
-          <ion-card-title><span class="text-base lg:text-lg">friendly to the maximum!</span>
+          <ion-card-title><span class="text-base lg:text-lg">{{post.title}}</span>
             
             <ion-card-subtitle><span>John Doe - </span>  <span> 03/03 13:48</span></ion-card-subtitle>
-
-            <h1>HER SKAL DER KOMME EN POST</h1>
-            <ion-button routerLink="read" >READ</ion-button>
-            &nbsp;
-
-            <ion-button class="tags lifeonland text-xs" fill="solid" size="small">LIFE ON LAND</ion-button> <ion-button class="tags lifeinwater text-xs" size="small">LIFE IN WATER</ion-button> <ion-button class="tags equality text-xs" size="small">EQUALITY</ion-button>
+  
             </ion-card-title>
             </ion-col>
             </ion-row>
@@ -55,40 +51,11 @@
         </ion-card-content>
       </ion-card>
     </ion-col>
-
+  
     <ion-col>
       
     </ion-col>
-
-    <ion-col>
-      
-    </ion-col>
-  </ion-row>
-  <!--second post row-->
-  <ion-row>
-    <ion-col>
-
-    </ion-col>
-
-    <ion-col>
-      
-    </ion-col>
-
-    <ion-col>
-      
-    </ion-col>
-  </ion-row>
-
-  <!--third post row-->
-  <ion-row>
-    <ion-col>
-
-    </ion-col>
-
-    <ion-col>
-      
-    </ion-col>
-
+  
     <ion-col>
       
     </ion-col>

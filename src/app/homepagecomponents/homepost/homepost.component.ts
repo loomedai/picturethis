@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiService} from '../../api/api.service';
 
 @Component({
   selector: 'app-homepost',
@@ -7,8 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepostComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ApiService) { }
 
-  ngOnInit() {}
+  readData:any;
+
+  ngOnInit(): void {
+    this.service.getAllData().subscribe((res)=>{
+      console.log(res,"res==>");
+      this.readData = res.data;
+    });
+  }
 
 }
