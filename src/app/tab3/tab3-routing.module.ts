@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Tab3Page } from './tab3.page';
 import { CreatepostComponent } from '../createpost/createpost.component';
-import{ReadComponent} from '../read/read.component';
 
 const routes: Routes = [
   {
@@ -12,10 +11,6 @@ const routes: Routes = [
   {
     path:'creatpost',component:CreatepostComponent
   },
-  {
-    path:'read',component:ReadComponent
-    
-},
 ];
 
 @NgModule({

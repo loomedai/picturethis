@@ -109,6 +109,9 @@ app.post('/posts',(req,res)=>{
 
 })
 
+// create user?? skal vi have det?
+
+
 // Update a single post. for update we use put
 app.put('/posts/:id',(req,res)=>{
 
