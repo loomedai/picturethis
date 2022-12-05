@@ -9,7 +9,7 @@ import { HeroheaderComponent } from '../homepagecomponents/heroheader/heroheader
 import { LeaderboardComponent } from '../homepagecomponents/leaderboard/leaderboard.component';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 import { FooterComponent } from "../homepagecomponents/footer/footer.component";
-import { NavbarComponent } from '../homepagecomponents/navbar/navbar.component';
+
 
 @NgModule({
   imports: [
@@ -19,6 +19,6 @@ import { NavbarComponent } from '../homepagecomponents/navbar/navbar.component';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
   ],
-  declarations: [Tab1Page, NavbarComponent, HomepostComponent, HeroheaderComponent, LeaderboardComponent, FooterComponent]
+  declarations: [Tab1Page,  HomepostComponent, HeroheaderComponent, LeaderboardComponent, FooterComponent]
 })
 export class Tab1PageModule {}
