@@ -18,5 +18,9 @@ export class HomepostComponent implements OnInit {
       this.readData = res.data;
     });
   }
+  counter = 0;
 
+  increment() {
+    this.counter++;
+  }
 }

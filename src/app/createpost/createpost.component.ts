@@ -33,7 +33,8 @@ postSubmit(){
       
       this.service.CreateData(this.postForm.value).subscribe((res)=>{
        console.log(res, 'res==>'); 
-       this.postForm.reset()
+       this.postForm.reset();
+       this.successmsg = res.message;
       });
       
     }

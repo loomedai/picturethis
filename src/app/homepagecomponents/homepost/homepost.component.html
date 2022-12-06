@@ -4,44 +4,44 @@
       <ion-title class="ion-text-center posttitle">Ideas & Posts</ion-title>
     </ion-col>
   </ion-row>
-   <!--Buttons of UN world goals-->
-   <ion-row style="text-align:center" class="ion-justify-content-center ion-align-items-center md:px-10 lg:px-32 mb-10" >
+  <!--Buttons of UN world goals-->
+  <ion-row style="text-align:center" class="ion-justify-content-center ion-align-items-center md:px-10 lg:px-32 mb-10">
 
     <ion-col size="6" size-md="3">
       <ion-button class="lifeonland w-40 xl:w-52 lg:w-48 text-xs lg:text-sm">WATER & SANITATION</ion-button>
     </ion-col>
-      
+
     <ion-col size="6" size-md="3">
       <ion-button class="lifeinwater w-40 xl:w-52 lg:w-48 text-xs lg:text-sm">LIFE IN WATER</ion-button>
     </ion-col>
-      
+
     <ion-col size="6" size-md="3">
       <ion-button class="jobandmoney w-40 xl:w-52 lg:w-48 text-xs lg:text-sm">ECONOMICAL GROWTH</ion-button>
     </ion-col>
-      
+
     <ion-col size="6" size-md="3">
       <ion-button class="equality w-40 lg:w-48 xl:w-52  text-xs lg:text-sm">EQUALITY</ion-button>
     </ion-col>
     <img src="" alt="" srcset="">
   </ion-row>
- <!--first post row-->
+  <!--first post row-->
 
-  <ion-row  class=" md:px-10 lg:px-44">
+  <ion-row class=" md:px-10 lg:px-44">
     <ion-col *ngFor="let post of readData" size="12" size-lg="4">
       <ion-card>
         <ion-card-header>
           <ion-grid>
-          <ion-row>
-          <ion-col size="12" size-xl="2">
-          <img class="" />
-          </ion-col>
-          <ion-col class="ion-align-self-center" size="10">
-          <ion-card-title><span class="text-base lg:text-lg">{{post.title}}</span>
-            
-            <ion-card-subtitle><span>John Doe - </span>  <span> 03/03 13:48</span></ion-card-subtitle>
-  
-            </ion-card-title>
-            </ion-col>
+            <ion-row>
+              <ion-col size="12" size-xl="2">
+                <img class="" />
+              </ion-col>
+              <ion-col class="ion-align-self-center" size="10">
+                <ion-card-title><span class="text-base lg:text-lg">{{post.title}}</span>
+
+                  <ion-card-subtitle><span>John Doe - </span> <span> 03/03 13:48</span></ion-card-subtitle>
+
+                </ion-card-title>
+              </ion-col>
             </ion-row>
           </ion-grid>
         </ion-card-header>
@@ -51,13 +51,9 @@
         </ion-card-content>
       </ion-card>
     </ion-col>
-  
-    <ion-col>
-      
-    </ion-col>
-  
-    <ion-col>
-      
-    </ion-col>
+    <div class="number-display">
+      {{counter}}
+    </div>
+    <button (click)="increment()"> Like </button>
   </ion-row>
 </ion-grid>
