@@ -8,7 +8,7 @@ import { HomepostComponent } from '../homepagecomponents/homepost/homepost.compo
 import { HeroheaderComponent } from '../homepagecomponents/heroheader/heroheader.component';
 import { LeaderboardComponent } from '../homepagecomponents/leaderboard/leaderboard.component';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
-import { FooterComponent } from "../homepagecomponents/footer/footer.component";
+
 
 
 @NgModule({
@@ -19,6 +19,6 @@ import { FooterComponent } from "../homepagecomponents/footer/footer.component";
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
   ],
-  declarations: [Tab1Page,  HomepostComponent, HeroheaderComponent, LeaderboardComponent, FooterComponent]
+  declarations: [Tab1Page,  HomepostComponent, HeroheaderComponent, LeaderboardComponent]
 })
 export class Tab1PageModule {}
