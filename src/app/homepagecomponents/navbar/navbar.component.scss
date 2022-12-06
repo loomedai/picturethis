@@ -13,3 +13,14 @@ ion-button {
   --box-shadow: none;
   text-transform: none;
 }
+
+ion-tab-bar {
+  --background: none;
+  --color: #ffffff;
+}
+
+ion-label {
+  --color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+}
