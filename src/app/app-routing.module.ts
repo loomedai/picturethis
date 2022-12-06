@@ -20,10 +20,6 @@ const routes: Routes = [
     component: ProfilepageComponent
   },
 
-  {
-    path: 'profilepage',
-    component: ProfilepageComponent
-  },
 
 ];
 @NgModule({
