@@ -7,6 +7,7 @@ import { TabsPageRoutingModule } from './tabs-routing.module';
 
 import { TabsPage } from './tabs.page';
 import { NavbarComponent } from '../homepagecomponents/navbar/navbar.component';
+import { FooterComponent } from '../homepagecomponents/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { NavbarComponent } from '../homepagecomponents/navbar/navbar.component';
     FormsModule,
     TabsPageRoutingModule
   ],
-  declarations: [TabsPage,NavbarComponent]
+  declarations: [TabsPage,NavbarComponent, FooterComponent]
 })
 export class TabsPageModule {}
