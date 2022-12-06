@@ -1,4 +1,18 @@
+.footerColor {
+    background-color: #FF3A21;
+}
+
+
 .loginBtn {
     --background: #FF3A21;
     border-radius: 15px;
 }
+
+.ion-button{
+    --text-align: left;
+}
+
+.stupidBtn {
+    justify-content: flex-start !important;
+    text-align: start !important;
+  }
