@@ -1,11 +1,11 @@
 <ion-grid class="mt-28">
-  <ion-col>
-    <h1>This is going to be make a post</h1>
+  <ion-row>
+    <ion-col>
     <ion-button routerLink="createpost">Make post</ion-button>
-    &nbsp;
-  </ion-col>  
+  </ion-col>
+  </ion-row>  
 
-<ion-row  class=" md:px-10 lg:px-44">
+<ion-row  class="md:px-10 lg:px-44">
   <ion-col *ngFor="let post of readData" size="12" size-lg="4">
     <ion-card>
       <ion-card-header>
@@ -29,14 +29,6 @@
         {{post.description}}
       </ion-card-content>
     </ion-card>
-  </ion-col>
-
-  <ion-col>
-    
-  </ion-col>
-
-  <ion-col>
-    
   </ion-col>
 </ion-row>
 </ion-grid>

@@ -13,10 +13,12 @@ import { ProfilepageComponent } from './logged-in/profilepage/profilepage.compon
 import { ReadComponent } from './read/read.component';
 import {CreatepostComponent } from './createpost/createpost.component';
 
+import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+
 @NgModule({
   declarations: [AppComponent, ProfilepageComponent,CreatepostComponent],
   imports: [
-    BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
+    BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   providers: [ApiService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })
