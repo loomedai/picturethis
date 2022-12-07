@@ -9,7 +9,6 @@ import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ApiService } from './api/api.service';
 
-import { ProfilepageComponent } from './logged-in/profilepage/profilepage.component';
 import { ReadComponent } from './read/read.component';
 import {CreatepostComponent } from './createpost/createpost.component';
 
@@ -18,7 +17,7 @@ import { ProfilePage } from './logged-in/profile-page/profile.page';
 
 
 @NgModule({
-  declarations: [AppComponent, ProfilepageComponent,CreatepostComponent, ProfilePage],
+  declarations: [AppComponent, CreatepostComponent, ProfilePage],
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   providers: [ApiService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

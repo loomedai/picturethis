@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { ProfilepageComponent } from './logged-in/profilepage/profilepage.component';import { CreatepostComponent } from './createpost/createpost.component';
+import { CreatepostComponent } from './createpost/createpost.component';
 import{ReadComponent} from './read/read.component';
 import { ProfilePage } from './logged-in/profile-page/profile.page';
 const routes: Routes = [
@@ -14,17 +14,10 @@ const routes: Routes = [
   {
     path:'read',component:ReadComponent
   },
-
-  {
-    path: 'profilepage',
-    component: ProfilepageComponent
-  },
   {
     path: 'profile-page',
     component: ProfilePage
   },
-
-
 
 ];
 @NgModule({
