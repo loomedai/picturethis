@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { observable, Observable } from 'rxjs';
-import { CreatepostComponent } from '../createpost/createpost.component';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,8 +25,14 @@ export class ApiService {
     console.log(data,'createapi=>')
   return this._http.post(`${this.apiUrl}`,data);
 }
+
+  //Delete post
+
+delete(id:any):Observable<any>
+{
+  let ids = id;
+  return this._http.delete(`${this.apiUrl}/${ids}`)
 }
 
-
-
+}
 
