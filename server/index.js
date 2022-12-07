@@ -94,8 +94,9 @@ app.post('/posts',(req,res)=>{
     let title = req.body.title;
     let descr = req.body.description;
     let img = req.body.img;
+    let like = req.body.likes;
 
-    let qry = `insert into posts(title,description,img) values("${title}","${descr}","${img}")`;
+    let qry = `insert into posts(title,description,img,likes) values("${title}","${descr}","${img}","${like}")`;
 
     db.query(qry,(err,result)=>{
 
