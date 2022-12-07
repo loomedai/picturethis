@@ -49,11 +49,12 @@
         <ion-card-content class="">
           Here's a small text description for the card content. Nothing more, nothing less.
         </ion-card-content>
-      </ion-card>
+      <div class="number-display">
+        {{counter}}
+      </div>
+      <button (click)="increment()"> Like </button>
+    </ion-card>
+      
     </ion-col>
-    <div class="number-display">
-      {{counter}}
-    </div>
-    <button (click)="increment()"> Like </button>
   </ion-row>
 </ion-grid>

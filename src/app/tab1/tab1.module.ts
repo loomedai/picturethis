@@ -8,6 +8,7 @@ import { HomepostComponent } from '../homepagecomponents/homepost/homepost.compo
 import { HeroheaderComponent } from '../homepagecomponents/heroheader/heroheader.component';
 import { LeaderboardComponent } from '../homepagecomponents/leaderboard/leaderboard.component';
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { FooterComponent } from '../homepagecomponents/footer/footer.component';
 
 
 
@@ -19,6 +20,6 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     ExploreContainerComponentModule,
     Tab1PageRoutingModule,
   ],
-  declarations: [Tab1Page,  HomepostComponent, HeroheaderComponent, LeaderboardComponent]
+  declarations: [Tab1Page,  HomepostComponent, HeroheaderComponent, LeaderboardComponent, FooterComponent]
 })
 export class Tab1PageModule {}
