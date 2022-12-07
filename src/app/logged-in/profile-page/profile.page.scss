@@ -1,5 +1,7 @@
 
-
+ion-title{
+    font-size: 48px;
+}
 .profileimg{
     border-radius: 50% !important;
     overflow: hidden;
@@ -16,3 +18,25 @@
     width: 60px;
     height: 60px;
 }
+
+@media only screen and (max-width: 600px) {
+    .titlerow {
+      padding-bottom: 5rem;
+      padding-top: 5rem;
+      
+    }
+    .posttitle{
+        font-size: 25px;
+    }
+    .text-xs{
+      font-size: 10px !important;
+    }
+    .profileimg{
+        width: 200px;
+        height: 200px;
+    }
+    ion-title{
+        font-size: 30px;
+    }
+  }
+ 
