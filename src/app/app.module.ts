@@ -14,9 +14,11 @@ import { ReadComponent } from './read/read.component';
 import {CreatepostComponent } from './createpost/createpost.component';
 
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
+import { ProfilePage } from './logged-in/profile-page/profile.page';
+
 
 @NgModule({
-  declarations: [AppComponent, ProfilepageComponent,CreatepostComponent],
+  declarations: [AppComponent, ProfilepageComponent,CreatepostComponent, ProfilePage],
   imports: [
     BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule, ReactiveFormsModule, FormsModule],
   providers: [ApiService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
