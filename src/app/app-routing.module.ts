@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { CreatepostComponent } from './createpost/createpost.component';
 import{ReadComponent} from './read/read.component';
-import { ProfilePage } from './logged-in/profile-page/profile.page';
 const routes: Routes = [
   {
     path: '',
@@ -15,10 +14,7 @@ const routes: Routes = [
     path:'read',component:ReadComponent
   },
   {
-    path: 'profile-page',
-    component: ProfilePage
-  },  {
-    path: 'tabs-logged-in',
+    path: '',
     loadChildren: () => import('./logged-in/tabs-logged-in/tabs-logged-in.module').then( m => m.TabsLoggedInPageModule)
   },
 

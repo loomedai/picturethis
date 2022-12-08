@@ -5,8 +5,24 @@ import { TabsLoggedInPage } from './tabs-logged-in.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: TabsLoggedInPage
+    path: 'tabslogin',
+    component: TabsLoggedInPage,
+    children: [
+      {
+        path: 'tablogin1',
+        loadChildren: () => import('../profile-page/profile.module').then(m => m.ProfilePageModule)
+      },
+      {
+        path: 'tablogin1',
+        redirectTo: '/tabslogin/tablogin1',
+        pathMatch: 'full'
+      }
+    ]
+  },
+  {
+    path: 'tablogin1',
+    redirectTo: '/tabslogin/tablogin1',
+    pathMatch: 'full'
   }
 ];
 
