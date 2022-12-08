@@ -10,8 +10,14 @@ export class HeroheaderComponent implements OnInit {
 
   constructor(private service:ApiService) { }
 
-  ngOnInit() {
+    readData:any;
+
+    ngOnInit(): void {
+      this.service.getAllData().subscribe((res)=>{
+        console.log(res,"res==>");
+        this.readData = res.data;
+      });
+    }
     
   }
 
-}

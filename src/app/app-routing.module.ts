@@ -17,7 +17,11 @@ const routes: Routes = [
   {
     path: 'profile-page',
     component: ProfilePage
+  },  {
+    path: 'tabs-logged-in',
+    loadChildren: () => import('./logged-in/tabs-logged-in/tabs-logged-in.module').then( m => m.TabsLoggedInPageModule)
   },
+
 
 ];
 @NgModule({
