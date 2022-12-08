@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api/api.service';
 
 @Component({
   selector: 'app-heroheader',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroheaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ApiService) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 
 }
