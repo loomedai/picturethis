@@ -17,6 +17,10 @@ const routes: Routes = [
         loadChildren: () => import('../favorite-page/favorite-page.module').then(m => m.FavoritePagePageModule)
       },
       {
+        path: 'tablogin3',
+        loadChildren: () => import('../post-page/post-page.module').then(m => m.PostPagePageModule)
+      },
+      {
         path: 'tablogin1',
         redirectTo: '/tabslogin/tablogin1',
         pathMatch: 'full'

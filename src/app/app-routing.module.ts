@@ -16,10 +16,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./logged-in/tabs-logged-in/tabs-logged-in.module').then( m => m.TabsLoggedInPageModule)
-  },  {
-    path: 'post-page',
-    loadChildren: () => import('./logged-in/post-page/post-page.module').then( m => m.PostPagePageModule)
   },
+ 
 
  
 
