@@ -21,6 +21,10 @@ const routes: Routes = [
         loadChildren: () => import('../post-page/post-page.module').then(m => m.PostPagePageModule)
       },
       {
+      path: 'tablogin4',
+      loadChildren: () => import('../create-page/create-page.module').then(m => m.CreatePagePageModule)
+      },
+      {
         path: 'tablogin1',
         redirectTo: '/tabslogin/tablogin1',
         pathMatch: 'full'
