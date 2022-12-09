@@ -13,6 +13,10 @@ const routes: Routes = [
         loadChildren: () => import('../profile-page/profile.module').then(m => m.ProfilePageModule)
       },
       {
+        path: 'tablogin2',
+        loadChildren: () => import('../favorite-page/favorite-page.module').then(m => m.FavoritePagePageModule)
+      },
+      {
         path: 'tablogin1',
         redirectTo: '/tabslogin/tablogin1',
         pathMatch: 'full'
