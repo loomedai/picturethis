@@ -20,6 +20,19 @@ export class CreatePagePage implements OnInit {
 
   ngOnInit() {
     this.getparamid = this.router.snapshot.paramMap.get('id');
+    if(this.getparamid){
+      this.service.getSinglePost(this.getparamid).subscribe((res)=>{
+      console.log(res,'res==>')
+      this.postForm.patchValue({
+        title: res.data[0].title,
+        img: res.data[0].img,
+        description: res.data[0].description,
+        category: res.data[0].category,
+      });
+
+    });
+    }
+    
   }
 
   postForm = new FormGroup({
@@ -28,7 +41,8 @@ export class CreatePagePage implements OnInit {
     'description': new FormControl('',Validators.required),
     'category': new FormControl('', Validators.required)
   });
-
+  
+  //new post
   postSubmit(){
     if(this.postForm.valid){
       
@@ -48,4 +62,17 @@ customAlertOptions = {
   message: 'Choose only one',
   translucent: true,
 };
+
+//update post
+postUpdate(){
+   console.log(this.postForm.value,'updateform');
+   if(this.postForm.valid){
+      this.service.updateData(this.postForm.value,this.getparamid).subscribe((res)=>{
+          console.log(res,'resupdated');
+          this.successmsg = res.message;
+      });
+   }else{
+      this.errormsg = 'All fields are required'
+   }
+}
 }
