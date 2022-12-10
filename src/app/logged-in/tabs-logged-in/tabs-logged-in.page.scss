@@ -1,0 +1,43 @@
+ion-toolbar {
+    --background: rgba(0, 0, 0, 0.6);
+  }
+@media screen and (max-width: 992px) {
+    ion-toolbar {
+      display: none;
+    }
+  }
+@media screen and (min-width: 992px) {
+    .mobilenav {
+      display: none;
+    }
+    ion-toolbar{
+        margin-bottom: 30px;
+    }
+  }
+
+ion-button {
+  --background: none;
+  --background-activated: none;
+  --box-shadow: none;
+  text-transform: none;
+}
+
+ion-tab-bar {
+  --background: none;
+  --color: #ffffff;
+}
+
+ion-label {
+  --color: #ffffff;
+  font-size: 18px;
+}
+
+ion-tab-bar {
+  --background: none;
+  --border-radius: 8px;
+  --color: #ffffff;
+}
+
+.mobilenav{
+    background-color: #ffffff;
+}
