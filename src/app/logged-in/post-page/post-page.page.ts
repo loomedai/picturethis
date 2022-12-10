@@ -24,8 +24,7 @@ export class PostPagePage implements OnInit {
     this.service.getCategory(typeC).subscribe((res)=>{
       console.log(res,"res==>");
       this.readCategory = res.data;
-    });
-  
+    }); 
   }
 
   counter = 0;

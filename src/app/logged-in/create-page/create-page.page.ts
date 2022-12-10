@@ -50,6 +50,7 @@ export class CreatePagePage implements OnInit {
        console.log(res, 'res==>'); 
        this.postForm.reset();
        this.successmsg = res.message;
+       window.location.reload();
       });
       
     }
@@ -57,8 +58,6 @@ export class CreatePagePage implements OnInit {
      this.errormsg = 'All fields must be filled'
     }
 
-
-    
   }
   customAlertOptions = {
   header: 'Sustainable development goals',
@@ -75,6 +74,8 @@ export class CreatePagePage implements OnInit {
       this.service.updateData(this.postForm.value,this.getparamid).subscribe((res)=>{
           console.log(res,'resupdated');
           this.successmsg = res.message;
+          window.location.reload();
+          
         });
       }else{
       this.errormsg = 'All fields are required'
