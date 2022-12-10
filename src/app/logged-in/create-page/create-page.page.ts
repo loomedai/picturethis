@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../../api/api.service'; 
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { AlertController } from '@ionic/angular';
+import {ActivatedRoute} from '@angular/router';
+
 @Component({
   selector: 'app-create-page',
   templateUrl: './create-page.page.html',
@@ -9,12 +11,15 @@ import { AlertController } from '@ionic/angular';
 })
 export class CreatePagePage implements OnInit {
 
-  constructor(private service:ApiService, alertcontroller:AlertController) { }
+  constructor(private service:ApiService, alertcontroller:AlertController, private router:ActivatedRoute) { }
   errormsg:any;
   successmsg:any;
+  getparamid:any
+
  // const [presentAlert] = useIonAlert();
 
   ngOnInit() {
+    this.getparamid = this.router.snapshot.paramMap.get('id');
   }
 
   postForm = new FormGroup({
