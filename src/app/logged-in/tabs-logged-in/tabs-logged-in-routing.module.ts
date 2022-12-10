@@ -5,35 +5,39 @@ import { TabsLoggedInPage } from './tabs-logged-in.page';
 
 const routes: Routes = [
   {
-    path: 'tabslogin',
+    path: 'tablogin',
     component: TabsLoggedInPage,
     children: [
       {
-        path: 'tablogin1',
+        path: 'profile',
         loadChildren: () => import('../profile-page/profile.module').then(m => m.ProfilePageModule)
       },
       {
-        path: 'tablogin2',
+        path: 'favorit',
         loadChildren: () => import('../favorite-page/favorite-page.module').then(m => m.FavoritePagePageModule)
       },
       {
-        path: 'tablogin3',
+        path: 'posts',
         loadChildren: () => import('../post-page/post-page.module').then(m => m.PostPagePageModule)
       },
       {
-      path: 'tablogin4',
+      path: 'create',
       loadChildren: () => import('../create-page/create-page.module').then(m => m.CreatePagePageModule)
       },
       {
-        path: 'tablogin1',
-        redirectTo: '/tabslogin/tablogin1',
+        path: 'update/:id',
+        loadChildren: () => import('../create-page/create-page.module').then(m => m.CreatePagePageModule)
+        },
+      {
+        path: 'profile',
+        redirectTo: '/tablogin/profile',
         pathMatch: 'full'
       }
     ]
   },
   {
-    path: 'tablogin1',
-    redirectTo: '/tabslogin/tablogin1',
+    path: 'profile',
+    redirectTo: '/tablogin/profile',
     pathMatch: 'full'
   }
 ];

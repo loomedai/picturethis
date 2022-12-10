@@ -35,12 +35,18 @@ export class ProfilePage implements OnInit {
     this.service.delete(id).subscribe((res)=>{
       console.log(res),'deleteres==>';
       this.successmsg = res.message;
+      this.getAllData();
 
-      this.service.getAllData().subscribe((res)=>{
-        console.log(res,"res==>");
-        this.readData = res.data;
-      });
+    });
+  }
 
+//get data
+
+  getAllData(){
+
+    this.service.getAllData().subscribe((res)=>{
+      console.log(res,"res==>");
+      this.readData = res.data;
     });
   }
 }

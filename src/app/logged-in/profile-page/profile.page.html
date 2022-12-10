@@ -92,14 +92,14 @@
         </ion-card-header>
         <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
         <ion-card-content class="">
-          Here's a small text description for the card content. Nothing more, nothing less.
+          <span class="text-base lg:text-lg">{{post.description}}</span>
         </ion-card-content>
       <div class="number-display">
         {{counter}}
       </div>
       <button (click)="increment()"> Like </button>
     </ion-card>
-    <ion-button color="primary">update</ion-button>
+    <ion-button [routerLink]="['/tablogin/update', post.id]"    color="primary">update</ion-button>
     <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>  
     </ion-col>
   </ion-row>

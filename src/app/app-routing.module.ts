@@ -12,6 +12,9 @@ const routes: Routes = [
     path:'createpost',component:CreatepostComponent
   },
   {
+    path:'createpost/:id',component:CreatepostComponent
+  },
+  {
     path:'read',component:ReadComponent
   },
   {
