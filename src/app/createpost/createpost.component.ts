@@ -42,5 +42,10 @@ postSubmit(){
      this.errormsg = 'All fields must be filled'
     }
 }
-
+customAlertOptions = {
+  header: 'Pizza Toppings',
+  subHeader: 'Select your favorite topping',
+  message: 'Choose only one',
+  translucent: true,
+};
 }

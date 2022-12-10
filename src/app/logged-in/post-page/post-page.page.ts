@@ -11,6 +11,7 @@ export class PostPagePage implements OnInit {
   constructor(private service:ApiService) { }
 
   readData:any;
+  readCategory:any;
 
   ngOnInit(): void {
     this.service.getAllData().subscribe((res)=>{
@@ -18,6 +19,15 @@ export class PostPagePage implements OnInit {
       this.readData = res.data;
     });
   }
+  
+  getType(typeC:any){
+    this.service.getCategory(typeC).subscribe((res)=>{
+      console.log(res,"res==>");
+      this.readCategory = res.data;
+    });
+  
+  }
+
   counter = 0;
 
   increment() {
