@@ -45,7 +45,7 @@ export class CreatePagePage implements OnInit {
   //new post
   postSubmit(){
     if(this.postForm.valid){
-      
+      console.log(this.postForm.value)
       this.service.CreateData(this.postForm.value).subscribe((res)=>{
        console.log(res, 'res==>'); 
        this.postForm.reset();
@@ -56,23 +56,28 @@ export class CreatePagePage implements OnInit {
     else{
      this.errormsg = 'All fields must be filled'
     }
-}
-customAlertOptions = {
+
+
+    
+  }
+  customAlertOptions = {
   header: 'Sustainable development goals',
   message: 'Choose only one',
   translucent: true,
-};
+  };
 
-//update post
-postUpdate(){
-   console.log(this.postForm.value,'updateform');
-   if(this.postForm.valid){
+  //update post
+  postUpdate(){
+
+      console.log(this.postForm.value,'updateform');
+
+      if(this.postForm.valid){
       this.service.updateData(this.postForm.value,this.getparamid).subscribe((res)=>{
           console.log(res,'resupdated');
           this.successmsg = res.message;
-      });
-   }else{
+        });
+      }else{
       this.errormsg = 'All fields are required'
    }
-}
+  }
 }
