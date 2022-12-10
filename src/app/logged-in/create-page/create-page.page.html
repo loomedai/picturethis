@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>create-page</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
+ 
 
-<ion-content>
+
+<ion-grid class="mt-28">
+  
+  <div *ngIf="errormsg" class="px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8" type="alert"><h3>{{errormsg}}</h3></div>
+  <form [formGroup]="postForm" (ngSubmit)="postSubmit()" class="px-7 sm:px-20">
+    <ion-grid class="">
+      <ion-row class="pb-5">
+        <ion-col size="6" class="">
+          <ion-item>
+            <ion-label position="floating">Title</ion-label>
+            <ion-input formControlName="title" placeholder="Enter the title of your solution"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="">
+      <ion-row class="pb-5">
+        <ion-col size="6" class="">
+          <ion-item>
+            <ion-label position="floating">Image</ion-label>
+            <ion-input formControlName="img" placeholder="Upload image for your solution"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid class="">
+      <ion-row class="flex" class="pb-12">
+        <ion-col size="6" class="">
+          <ion-item>
+            <ion-label position="floating">Description</ion-label>
+            <ion-input formControlName="description" placeholder="Describe the solution for the world"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-button type="submit">Make post</ion-button>
+
+  </form>
+</ion-grid>
 
 </ion-content>
