@@ -84,7 +84,33 @@ app.get('/posts/:id',(req,res)=>{
     })
 
 });
+// GET CATEGORY
+app.get('/posts/:category',(req,res)=>{
 
+    let typeC = req.params.category;
+
+    let qry = `select * from posts where category = ${typeC}`;
+
+    db.query(qry,(err,result)=>{
+
+        if(err) {console.log(err);}
+
+        if(result.length>0)
+        {
+            res.send({
+                message: 'get single data from category',
+                data:result
+            });
+        }
+        else 
+        {
+            res.send({
+                message:'data not available'
+            });
+        }
+    })
+
+});
 // create post
 
 app.post('/posts',(req,res)=>{
@@ -94,8 +120,9 @@ app.post('/posts',(req,res)=>{
     let title = req.body.title;
     let descr = req.body.description;
     let img = req.body.img;
+    let typeC = req.body.category;
 
-    let qry = `insert into posts(title,description,img) values("${title}","${descr}","${img}")`;
+    let qry = `insert into posts(title,description,img, category) values("${title}","${descr}","${img}", "${typeC}")`;
 
     db.query(qry,(err,result)=>{
 

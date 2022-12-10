@@ -42,7 +42,18 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label>Alert</ion-label>
+            <ion-select [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Select One">
+              <ion-select-option value="bacon">Bacon</ion-select-option>
+              <ion-select-option value="onions">Onions</ion-select-option>
+              <ion-select-option value="pepperoni">Pepperoni</ion-select-option>
+            </ion-select>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     <ion-button type="submit">Make post</ion-button>
 
   </form>

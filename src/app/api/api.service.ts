@@ -26,6 +26,14 @@ export class ApiService {
   return this._http.post(`${this.apiUrl}`,data);
 }
 
+  // GET CATEGORY
+
+  getCategory(typeC:any):Observable<any>{
+    let typeCategory = typeC
+    return this._http.get(`${this.apiUrl}/${typeCategory}`)
+
+  }
+
   //Delete post
 
 delete(id:any):Observable<any>

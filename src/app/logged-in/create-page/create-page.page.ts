@@ -25,7 +25,8 @@ export class CreatePagePage implements OnInit {
   postForm = new FormGroup({
     'title':new FormControl('',Validators.required),
     'img':new FormControl('',Validators.required),
-    'description': new FormControl('',Validators.required)
+    'description': new FormControl('',Validators.required),
+    'category': new FormControl('', Validators.required)
   });
 
   postSubmit(){
@@ -42,5 +43,9 @@ export class CreatePagePage implements OnInit {
      this.errormsg = 'All fields must be filled'
     }
 }
-
+customAlertOptions = {
+  header: 'Sustainable development goals',
+  message: 'Choose only one',
+  translucent: true,
+};
 }
