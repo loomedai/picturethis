@@ -5,7 +5,7 @@ import { TabsLoggedInPage } from './tabs-logged-in.page';
 
 const routes: Routes = [
   {
-    path: 'tablogin',
+    path: 'login',
     component: TabsLoggedInPage,
     children: [
       {
@@ -30,14 +30,14 @@ const routes: Routes = [
         },
       {
         path: 'profile',
-        redirectTo: '/tablogin/profile',
+        redirectTo: '/login/profile',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: 'profile',
-    redirectTo: '/tablogin/profile',
+    redirectTo: '/login/profile',
     pathMatch: 'full'
   }
 ];
