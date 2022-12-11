@@ -51,7 +51,7 @@
   
 
 <ion-row  class="md:px-16 lg:px-52">
-  <ion-col *ngFor="let post of readData" size="12" sizeMd="6" size-lg="4">
+  <ion-col *ngFor="let post of readData" size="12" sizeMd="6" sizeLg="4">
     <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">
       <ion-card-header>
         <ion-grid>
@@ -84,6 +84,8 @@
           </ion-list>
         </ion-accordion>
       </ion-accordion-group>
+
+      <ion-chip [disabled]="true">{{post.category}}</ion-chip>
 
     </ion-card>
   </ion-col>
