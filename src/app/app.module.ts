@@ -15,12 +15,14 @@ import {CreatepostComponent } from './createpost/createpost.component';
 import{FormsModule,ReactiveFormsModule} from '@angular/forms';
 // Import the module from the SDK
 import { AuthModule } from '@auth0/auth0-angular';
-
-
+import { TabsLoggedInPageModule } from './logged-in/tabs-logged-in/tabs-logged-in.module';
+import { TabsPageModule } from './tabs/tabs.module';
 @NgModule({
   declarations: [AppComponent, CreatepostComponent,],
   imports: [
     BrowserModule, 
+    TabsPageModule,
+    TabsLoggedInPageModule,
     IonicModule.forRoot(),
      AppRoutingModule,
      HttpClientModule, 
