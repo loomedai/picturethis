@@ -70,39 +70,41 @@
       </ion-col>
     </ion-row>
 
-    <div *ngIf="successmsg" class="px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8" type="alert"><h3>{{successmsg}}</h3></div>
-  <ion-row class=" md:px-10 lg:px-30 xl:px-40 mt-8">
-    <ion-col *ngFor="let post of readData" size="12" size-lg="4">
-      <ion-card>
-        <ion-card-header>
-          <ion-grid>
-            <ion-row>
-              <ion-col size="12" size-xl="2">
-                <img class="" />
-              </ion-col>
-              <ion-col class="ion-align-self-center" size="10">
-                <ion-card-title><span class="text-base lg:text-lg">{{post.title}}</span>
+    <div *ngIf="successmsg" class="px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8" type="alert"><h3>{{successmsg}}</h3>
+    </div>
 
-                  <ion-card-subtitle><span>John Doe - </span> <span> 03/03 13:48</span></ion-card-subtitle>
+    <ion-row class=" md:px-10 lg:px-30 xl:px-40 mt-8">
+      <ion-col *ngFor="let post of readData" size="12" size-lg="4">
+        <ion-card>
+          <ion-card-header>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="12" size-xl="2">
+                  <img class="" />
+                </ion-col>
+                <ion-col class="ion-align-self-center" size="10">
+                  <ion-card-title><span class="text-base lg:text-lg">{{post.title}}</span>
 
-                </ion-card-title>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-header>
-        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-        <ion-card-content class="">
-          <span class="text-base lg:text-lg">{{post.description}}</span>
-        </ion-card-content>
-      <div class="number-display">
-        {{counter}}
-      </div>
-      <button (click)="increment()"> Like </button>
-    </ion-card>
-    <ion-button [routerLink]="['/login/update', post.id]" color="primary">update</ion-button>
-    <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>  
-    </ion-col>
-  </ion-row>
+                    <ion-card-subtitle><span>John Doe - </span> <span> 03/03 13:48</span></ion-card-subtitle>
+
+                  </ion-card-title>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-header>
+          <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-content class="">
+              <span class="text-base lg:text-lg">{{post.description}}</span>
+            </ion-card-content>
+            <ion-chip [disabled]="true">{{post.category}}</ion-chip>
+            <div class="number-display">
+              {{counter}}
+            </div>
+            <button (click)="increment()"> Like </button>
+        </ion-card>
+        <ion-button [routerLink]="['/login/update', post.id]" color="primary">update</ion-button>
+        <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>  
+      </ion-col>
+    </ion-row>
   </ion-grid>
-
 </ion-content>
