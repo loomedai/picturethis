@@ -29,14 +29,14 @@ const routes: Routes = [
         loadChildren: () => import('../create-page/create-page.module').then(m => m.CreatePagePageModule)
         },
       {
-        path: 'profile',
+        path: '',
         redirectTo: '/login/profile',
         pathMatch: 'full'
       }
     ]
   },
   {
-    path: 'profile',
+    path: '',
     redirectTo: '/login/profile',
     pathMatch: 'full'
   }

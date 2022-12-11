@@ -1,6 +1,6 @@
   <ion-toolbar class="pr-10 desktopnav">
 
-    <ion-title slot="start" class="text-gs-primary text-5xl leading-9 mr-64"><div><a [routerLink]="['/login']">GLOBAL<br> SOLUTIONS</a></div></ion-title>
+    <ion-title slot="start" class="text-gs-primary text-5xl leading-9 mr-32"><div><a [routerLink]="['/login']">GLOBAL<br> SOLUTIONS</a></div></ion-title>
     <ion-tabs class="-mt-2 align-middle">
       
       <ion-tab-bar slot="bottom">
@@ -23,7 +23,7 @@
     
       
     </ion-tabs>
-    <ion-button class="bg-gs-primary-trans rounded" slot="end" >Sign out</ion-button>
+    <ion-button class="bg-gs-primary-trans rounded" slot="end" (click)="logout()">Sign out</ion-button>
   </ion-toolbar>
 
 <ion-tabs>
@@ -49,7 +49,11 @@
       <ion-icon class="text-[#222428]" name="person-outline"></ion-icon>
       <ion-label class="text-[#222428]">Profile</ion-label>
     </ion-tab-button>
- 
+
+    <ion-tab-button tab="profile" (click)="logout()">
+      <ion-icon class="text-[#222428]" name="log-out-outline"></ion-icon>
+      <ion-label class="text-[#222428]">Log out</ion-label>
+    </ion-tab-button>
   </ion-tab-bar>
 
 </ion-tabs>
