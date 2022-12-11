@@ -118,8 +118,11 @@
       </div>
 
     </ion-card>
-    <ion-button [routerLink]="['/login/update', post.id]" color="primary">update</ion-button>
-    <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>  
+
+    <ion-item>
+      <ion-button [routerLink]="['/login/update', post.id]" color="primary">update</ion-button>
+      <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>  
+    </ion-item>
     </ion-col>
   </ion-row>
   </ion-grid>
