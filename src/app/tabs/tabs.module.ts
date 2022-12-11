@@ -15,6 +15,6 @@ import { NavbarComponent } from '../homepagecomponents/navbar/navbar.component';
     FormsModule,
     TabsPageRoutingModule
   ],
-  declarations: [TabsPage,NavbarComponent]
+  declarations: [TabsPage,NavbarComponent, ]
 })
 export class TabsPageModule {}
