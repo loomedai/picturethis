@@ -58,6 +58,18 @@ getSinglePost(id:any):Observable<any>
   return this._http.get(`${this.apiUrl}/${ids}`);
 }
 
+// get user post
+getUserPosts(id:any):Observable<any>
+{
+  let uID = id;
+  const test = this._http.get(`http://localhost:3000/user/${uID}/posts`);
+  console.log(test);
+  
+  return this._http.get(`http://localhost:3000/user/${uID}/posts`);
+}
+
+
+
 
 }
 

@@ -12,12 +12,18 @@ export class ProfilePage implements OnInit {
   constructor(private service:ApiService) { }
 
   readData:any;
+  userPosts:any;
   successmsg:any;
 
   ngOnInit(): void {
     this.service.getAllData().subscribe((res)=>{
       console.log(res,"res==>");
       this.readData = res.data;
+    });
+
+    this.service.getUserPosts(11).subscribe((res)=>{
+      console.log(res,"res==>");
+      this.userPosts = res.data;
     });
   }
   counter = 0;
@@ -40,13 +46,20 @@ export class ProfilePage implements OnInit {
     });
   }
 
-//get data
+  //get data
 
   getAllData(){
 
     this.service.getAllData().subscribe((res)=>{
       console.log(res,"res==>");
       this.readData = res.data;
+    });
+  }
+
+  getUserPosts(id:any){
+    this.service.getUserPosts(id).subscribe((res)=>{
+      console.log(res,"res==>");
+      this.userPosts = res.data;
     });
   }
 }
