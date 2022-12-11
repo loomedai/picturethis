@@ -72,8 +72,8 @@
 
     <div *ngIf="successmsg" class="px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8" type="alert"><h3>{{successmsg}}</h3></div>
   <ion-row class=" md:px-10 lg:px-30 xl:px-40 mt-8">
-    <ion-col *ngFor="let post of readData" size="12" size-lg="4">
-      <ion-card>
+    <ion-col *ngFor="let post of readData" size="12" sizeMd="6" sizeLg="4">
+      <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">
         <ion-card-header>
           <ion-grid>
             <ion-row>
@@ -91,16 +91,37 @@
           </ion-grid>
         </ion-card-header>
         <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-        <ion-card-content class="">
-          <span class="text-base lg:text-lg">{{post.description}}</span>
-        </ion-card-content>
+      
+        <ion-accordion-group>
+          <ion-accordion>
+            <ion-item slot="header">
+              <ion-label class="text-2x1 font-semibold">Description</ion-label>
+            </ion-item>
+  
+            <ion-list slot="content">
+              <ion-item class="text-base lg:text-lg"> 
+                {{post.description}}
+              </ion-item>
+            </ion-list>S
+          </ion-accordion>
+        </ion-accordion-group>
+
+        <ion-chip [disabled]="true">{{post.category}}</ion-chip>
+
       <div class="number-display">
+        <button class="px-1" (click)="increment()"> Like </button>
+        <ion-icon color="danger" name="heart"></ion-icon>
         {{counter}}
+        
       </div>
-      <button (click)="increment()"> Like </button>
+      
+
+      
     </ion-card>
-    <ion-button [routerLink]="['/login/update', post.id]" color="primary">update</ion-button>
-    <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>  
+    <ion-item>
+      <ion-button [routerLink]="['/login/update', post.id]" color="primary">update</ion-button>
+      <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>  
+    </ion-item>
     </ion-col>
   </ion-row>
   </ion-grid>
