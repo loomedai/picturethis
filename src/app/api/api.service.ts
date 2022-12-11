@@ -50,5 +50,14 @@ updateData(data:any,id:any):Observable<any>
   return this._http.put(`${this.apiUrl}/${ids}`,data);
 }
 
+
+// get singe post
+getSinglePost(id:any):Observable<any>
+{
+  let ids = id;
+  return this._http.get(`${this.apiUrl}/${ids}`);
+}
+
+
 }
 
