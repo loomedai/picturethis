@@ -3,7 +3,7 @@
       <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
           <div class="mr-auto place-self-center lg:col-span-7">
               <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Welcome to an
-                <span class="text-blue-500">Ocean</span> of ideas
+                <span class="text-green-500">Ocean</span> of ideas
               </h1>
               <p class="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl">Check out the wonderfull and inovative ideas, from all around the globe</p>
               <ion-button routerLink="createpost" class=" text-base font-medium text-center text-white rounded-lg ">
@@ -70,11 +70,24 @@
         </ion-grid>
       </ion-card-header>
       <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-      <ion-card-content class="">
-        {{post.description}}
-      </ion-card-content>
+
+      <ion-accordion-group>
+        <ion-accordion>
+          <ion-item slot="header">
+            <ion-label>Description</ion-label>
+          </ion-item>
+
+          <ion-list slot="content">
+            <ion-item> 
+              {{post.description}}
+            </ion-item>
+          </ion-list>
+        </ion-accordion>
+      </ion-accordion-group>
+
     </ion-card>
   </ion-col>
+  
 </ion-row>
 </ion-grid>
 
