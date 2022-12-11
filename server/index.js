@@ -148,8 +148,9 @@ app.put('/posts/:id',(req,res)=>{
     let title = req.body.title;
     let descr = req.body.description;
     let img = req.body.img;
+    let typeC = req.body.category;
 
-    let qry = `update posts set title = "${title}", description = "${descr}", img = "${img}" where id = ${pID}`;
+    let qry = `update posts set title = "${title}", description = "${descr}", img = "${img}", category = "${typeC}" where id = ${pID}`;
 
     db.query(qry,(err,result)=>{
 
