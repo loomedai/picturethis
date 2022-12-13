@@ -5,6 +5,7 @@ ion-toolbar {
     ion-toolbar {
       display: none;
     }
+
   }
 @media screen and (min-width: 992px) {
     .mobilenav {
@@ -15,6 +16,14 @@ ion-toolbar {
     }
   }
  
+
+  @media screen and (max-width: 500px) {
+    ion-label {
+      display: none;
+    }
+    
+  }
+
 ion-button {
   --background: none;
   --background-activated: none;
