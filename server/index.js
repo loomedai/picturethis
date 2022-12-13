@@ -123,9 +123,8 @@ app.post('/posts',(req,res)=>{
     let descr = req.body.description;
     let img = req.body.img;
     let typeC = req.body.category;
-    let uID = req.body.uID
 
-    let qry = `insert into posts(title,description,img, category, uid) values("${title}","${descr}","${img}", "${typeC}","${uID})`;
+    let qry = `insert into posts(title,description,img, category) values("${title}","${descr}","${img}", "${typeC}")`;
 
     db.query(qry,(err,result)=>{
 
