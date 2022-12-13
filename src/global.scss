@@ -54,3 +54,11 @@ ion-title{
 .equality{
     --background: #ff3a21;
 }
+
+@media only screen and (max-width: 600px) { 
+    ion-label {
+  
+        font-size: 10px !important;
+      }
+      
+ }

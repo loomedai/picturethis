@@ -14,7 +14,7 @@ ion-toolbar {
         margin-bottom: 30px;
     }
   }
-
+ 
 ion-button {
   --background: none;
   --background-activated: none;
@@ -24,20 +24,25 @@ ion-button {
 
 ion-tab-bar {
   --background: none;
-  --color: #ffffff;
+  
 }
 
 ion-label {
-  --color: #ffffff;
+  
   font-size: 18px;
 }
 
 ion-tab-bar {
   --background: none;
   --border-radius: 8px;
-  --color: #ffffff;
+  
 }
-
+:host(.tab-selected){
+  color: blue !important;
+}
+ion-activatable{
+  display: none;
+}
 .mobilenav{
     background-color: #ffffff;
 }
