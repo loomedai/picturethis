@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService } from '../../api/api.service';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-profile',
@@ -9,21 +10,35 @@ import {ApiService } from '../../api/api.service';
 
 export class ProfilePage implements OnInit {
 
-  constructor(private service:ApiService) { }
-
   readData:any;
   userPosts:any;
   successmsg:any;
+  user: any;
+
+  constructor(private service:ApiService, public auth: AuthService) {
+    this.user = {};
+  }
 
   ngOnInit(): void {
-    this.service.getAllData().subscribe((res)=>{
-      console.log(res,"res==>");
-      this.readData = res.data;
+    this.auth.user$.subscribe((success: any) => {
+      this.user = success;
+
+      console.log(success);
+      
+      
+        const uID = success?.sub?.split('|')[1];
+        
+        this.service.getUserPosts(Number(uID)).subscribe((res)=>{
+          this.userPosts = res.data;
+        });
+   
     });
 
-    this.service.getUserPosts(11).subscribe((res)=>{
-      console.log(res,"res==>");
-      this.userPosts = res.data;
+    console.log(this.user);
+
+    this.service.getAllData().subscribe((res)=>{
+      
+      this.readData = res.data;
     });
   }
   counter = 0;
@@ -37,9 +52,9 @@ export class ProfilePage implements OnInit {
 
   deleteID(id:any)
   {
-    console.log(id,'deleteid==>');
+    
     this.service.delete(id).subscribe((res)=>{
-      console.log(res),'deleteres==>';
+      
       this.successmsg = res.message;
       this.getAllData();
 
@@ -51,15 +66,17 @@ export class ProfilePage implements OnInit {
   getAllData(){
 
     this.service.getAllData().subscribe((res)=>{
-      console.log(res,"res==>");
+      
       this.readData = res.data;
     });
   }
 
-  getUserPosts(id:any){
-    this.service.getUserPosts(id).subscribe((res)=>{
-      console.log(res,"res==>");
-      this.userPosts = res.data;
-    });
-  }
+//  getUserPosts(){
+//    this.service.getUserPosts(11).subscribe((res)=>{
+      
+//      this.userPosts = res.data;
+//    });
+//  }
+
+
 }
