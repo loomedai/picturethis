@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiService} from '../api/api.service';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-read',
@@ -8,7 +9,7 @@ import {ApiService} from '../api/api.service';
 })
 export class ReadComponent implements OnInit {
 
-  constructor(private service:ApiService) { }
+  constructor(private service:ApiService, public auth: AuthService) { }
 
   readData:any;
 
@@ -17,6 +18,17 @@ export class ReadComponent implements OnInit {
       console.log(res,"res==>");
       this.readData = res.data;
     });
+  }
+
+
+  login() {
+    this.auth.loginWithRedirect();
+  }
+
+  counter = 0;
+
+  increment() {
+    this.counter++;
   }
 
 }

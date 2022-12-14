@@ -28,7 +28,7 @@
 
   <ion-row class=" md:px-10 lg:px-44">
     <ion-col *ngFor="let post of readData" size="12" size-lg="4">
-      <ion-card>
+      <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">
         <ion-card-header>
           <ion-grid>
             <ion-row>
@@ -46,13 +46,31 @@
           </ion-grid>
         </ion-card-header>
         <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
-        <ion-card-content class="">
-          {{post.description}}
-        </ion-card-content>
+
+
+        <ion-accordion-group>
+        <ion-accordion>
+          <ion-item slot="header">
+            <ion-label>Description</ion-label>
+          </ion-item>
+
+          <ion-list slot="content">
+            <ion-item> 
+              {{post.description}}
+            </ion-item>
+          </ion-list>
+        </ion-accordion>
+      </ion-accordion-group>
+
+      <ion-chip [disabled]="true">{{post.category}}</ion-chip>
+
       <div class="number-display">
+        <button class="font-semibold text-black" (click)="increment()"> Like </button>
+        <ion-icon class="pl-1" color="danger" name="heart"></ion-icon>
         {{counter}}
       </div>
-      <button (click)="increment()"> Like </button>
+
+
     </ion-card>
       
     </ion-col>

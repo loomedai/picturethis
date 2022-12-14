@@ -6,8 +6,8 @@
                 <span class="text-green-500">Ocean</span> of ideas
               </h1>
               <p class="max-w-2xl mb-6 font-light text-white lg:mb-8 md:text-lg lg:text-xl">Check out the wonderfull and inovative ideas, from all around the globe</p>
-              <ion-button routerLink="createpost" class=" text-base font-medium text-center text-white rounded-lg ">
-                  Make a post
+              <ion-button (click)="login()"  class=" text-base font-medium text-center text-white rounded-lg ">
+                  Sign up now
                   
               </ion-button>
           </div>
@@ -87,6 +87,11 @@
 
       <ion-chip [disabled]="true">{{post.category}}</ion-chip>
 
+      <div class="number-display">
+        <button class="font-semibold text-black" (click)="increment()"> Like </button>
+        <ion-icon class="pl-1" color="danger" name="heart"></ion-icon>
+        {{counter}}
+      </div>
       
 
       
