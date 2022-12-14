@@ -17,9 +17,9 @@
 
           <div *ngIf="auth.user$ | async as user">
             <ion-card-subtitle>Name</ion-card-subtitle>
-          <p>{{ user.email }}</p>
+          <p>{{ user.nickname }}</p>
           <ion-card-subtitle>Email Adress</ion-card-subtitle>
-          <p>johndoe@email.com</p>
+          <p>j{{ user.email }}</p>
 
         </div>
        </div>
