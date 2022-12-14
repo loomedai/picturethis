@@ -15,14 +15,14 @@ app.use(bodyparser.json());
 
 const db = mysql.createConnection({
 
-    host:'localhost',
-    user:'root',
-    password:'',
-    database:'solutionsdb',
- //     host:'remotemysql.com',
- //     user: 'YV7hmbfNlq',
- //     password: 'y14XO122ar',
- //     database: 'YV7hmbfNlq',
+ //   host:'localhost',
+ //   user:'root',
+ //   password:'',
+ //   database:'solutionsdb',
+      host:'remotemysql.com',
+      user: 'YV7hmbfNlq',
+      password: 'y14XO122ar',
+      database: 'YV7hmbfNlq',
       port: 3306
 });
  
@@ -111,6 +111,8 @@ app.get('/posts/:category',(req,res)=>{
     })
 
 });
+
+
 // create post
 
 app.post('/posts',(req,res)=>{
@@ -136,7 +138,35 @@ app.post('/posts',(req,res)=>{
 
 })
 
-// create user?? skal vi have det?
+// user posts
+
+app.get('/user/:id/posts',(req,res)=>{
+
+    const uID = req.params.id;
+
+    let qry = `select * from posts where uID = ${uID}`;
+
+    
+    db.query(qry,(err,result)=>{
+
+        if(err) {console.log(err);}
+
+        if(result.length>0)
+        {
+            res.send({
+                message: 'get all User post',
+                data:result
+            });
+        }
+        else 
+        {
+            res.send({
+                message:'posts not available'
+            });
+        }
+    })
+})
+
 
 
 // Update a single post. for update we use put
@@ -144,12 +174,13 @@ app.put('/posts/:id',(req,res)=>{
 
     console.log(req.body,'updatepost');
 
-    let pID = req.params.id
+    let pID = req.params.id;
     let title = req.body.title;
     let descr = req.body.description;
     let img = req.body.img;
+    let typeC = req.body.category;
 
-    let qry = `update posts set title = "${title}", description = "${descr}", img = "${img}" where id = ${pID}`;
+    let qry = `update posts set title = "${title}", description = "${descr}", img = "${img}", category = "${typeC}" where id = ${pID}`;
 
     db.query(qry,(err,result)=>{
 

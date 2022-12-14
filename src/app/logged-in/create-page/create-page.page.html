@@ -1,68 +1,65 @@
 <ion-content [fullscreen]="true" >
-    <ion-header collapse="condense">
-      <ion-toolbar>
-      </ion-toolbar>
-    </ion-header>
-   
-  
-  
-  <ion-grid class="mt-12">
-    
-    <div *ngIf="errormsg" class="px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8" type="alert"><h3>{{errormsg}}</h3></div>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+    </ion-toolbar>
+  </ion-header>
 
-    <form [formGroup]="postForm" class="px-7 sm:px-20">
-      <ion-grid class="">
-        <ion-row class="pb-5 lg:pb-2">
-          <ion-col size="6" class="">
-            <ion-item>
-              <ion-label position="floating">Title</ion-label>
-              <ion-input formControlName="title" placeholder="Enter the title of your solution"></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-  
-      <ion-grid class="">
-        <ion-row class="pb-5 lg:pb-2">
-          <ion-col size="6" class="">
-            <ion-item>
-              <ion-label position="floating">Image</ion-label>
-              <ion-input formControlName="img" placeholder="Upload image for your solution"></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-  
-      <ion-grid class="">
-        <ion-row class="flex" class="pb-8">
-          <ion-col size="6" class="">
-            <ion-item>
-              <ion-label position="floating">Description</ion-label>
-              <ion-input formControlName="description" placeholder="Describe the solution for the world"></ion-input>
-            </ion-item>
-          </ion-col>
-        </ion-row>  
-        <ion-row> 
-          <ion-col size="2" class="">
-            <ion-label>Chose your Sustainable development goals</ion-label>
-            <ion-select formControlName="category" [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Select One">
-              <ion-select-option value="WATER & SANITATION">WATER & SANITATION</ion-select-option>
-              <ion-select-option value="LIFE BELOW WATER">LIFE BELOW WATER</ion-select-option>
-              <ion-select-option value="ECONOMICAL GROWTH">ECONOMICAL GROWTH</ion-select-option>
-              <ion-select-option value="EQUALITY">EQUALITY</ion-select-option>
-            </ion-select>
-          </ion-col>
-        </ion-row>   
-      </ion-grid>
-  
-      <ion-button type="submit" *ngIf ="!getparamid" (click)="postSubmit()" [routerLink]="['/login/profile']">Make post</ion-button>
-  
-      <ion-button type="submit" color="success" *ngIf ="getparamid" (click)="postUpdate()" [routerLink]="['/login/profile']">Update</ion-button>
 
-    </form>
-  </ion-grid>
+<h1 class="text-6xl font-bold text-center mt-28">Create a post</h1>
+<div class="grid md:grid-cols-1 lg:grid-cols-2 p-10 gap-8 rounded-lg shadow md:w-2/4 mx-auto lg:w-2/3">
   
+<div class="">
+  <form id="myForm" [formGroup]="postForm" (ngSubmit)="postSubmit()">
+
+    <ion-title class="ion-no-padding">World goal: </ion-title><ion-select formControlName="category" id="categoryInput" [interfaceOptions]="customAlertOptions" interface="alert" placeholder="Select a goal">
+      <ion-select-option value="WATER & SANITATION">WATER & SANITATION</ion-select-option>
+      <ion-select-option value="LIFE BELOW WATER">LIFE BELOW WATER</ion-select-option>
+      <ion-select-option value="ECONOMICAL GROWTH">ECONOMICAL GROWTH</ion-select-option>
+      <ion-select-option value="EQUALITY">EQUALITY</ion-select-option>
+    </ion-select>
+
+    <ion-title class="ion-no-padding">Image: </ion-title><input formControlName="img" type="file" id="imageInput" accept="image/png, image/jpg, image/jpeg, image/webp"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"><br><br>
+    <ion-title class="ion-no-padding">Title: </ion-title><ion-input formControlName="title" type="text" id="titleInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"></ion-input><br>
+    <ion-title class="ion-no-padding">Description: </ion-title><ion-textarea formControlName="description" rows="6" id="bodyInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"></ion-textarea><br>
+
+    <ion-button type="submit">Make post</ion-button>
+  </form>
+</div>
+  
+
+<!-- 
+  <div id="preview">
+    <h1 id="previewTitle"></h1>
+    <p id="previewBody"></p>
+    <img id="previewImage">
+  </div> -->
+  <div id="preview">
+      <ion-title>Preview:</ion-title>
+      <ion-title class="text-sm font-normal">Upload an image to preview post.</ion-title>
+    <ion-row class="">
+
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-grid>
+            <ion-row>
+              <ion-col class="ion-align-self-center" size="10">
+                <ion-card-title><span class="text-base lg:text-lg"><h1 id="previewTitle">Your title here</h1>
+                </span>
+                </ion-card-title>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-header>
+        <img id="previewImage" src="https://ionicframework.com/docs/img/demos/card-media.png"/>
+        <ion-card-content class="">
+          <p id="previewBody">Your description here</p>
+          <ion-chip id="previewCategory">Your chosen world goal</ion-chip>
+        </ion-card-content>
+    </ion-card>
+      
+    </ion-col>
+  </ion-row>
+</div>
+</div>
 </ion-content>
-
-
-

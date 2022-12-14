@@ -2,7 +2,7 @@
 
   <ion-grid class="ion-no-padding px-10 lg:px-26 xl:36">
     <!--profile image. profile info and badges-->
-    <ion-row  class="mt-10">
+    <ion-row  class="mt-10 lg:mt-32">
       <ion-col size="12" size-lg="4" class="pb-12 lg:pb-0">
         <div class="flex flex-col items-center">
         <img class="profileimg" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="Hans" srcset="">
@@ -13,10 +13,15 @@
       <ion-col size="12" size-md="6" size-lg="4">
        <div class="flex flex-col items-center lg:items-start py-5">
         <ion-title class="ion-no-padding ">Your Profile</ion-title>
-        <ion-card-subtitle>Full Name</ion-card-subtitle>
-        <p>Hans Hansen</p>
-        <ion-card-subtitle>Email Adress</ion-card-subtitle>
-        <p>johndoe@email.com</p>
+        
+
+          <div *ngIf="auth.user$ | async as user">
+            <ion-card-subtitle>Name</ion-card-subtitle>
+          <p>{{ user.nickname }}</p>
+          <ion-card-subtitle>Email Adress</ion-card-subtitle>
+          <p>j{{ user.email }}</p>
+
+        </div>
        </div>
       </ion-col>
        
@@ -74,7 +79,7 @@
     <div *ngIf="successmsg" class="px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8" type="alert"><h3>{{successmsg}}</h3>
     </div>
      <ion-row class=" md:px-10 lg:px-30 xl:px-40 mt-8">
-      <ion-col *ngFor="let post of readData" size="12" sizeMd="6" sizeLg="4">
+      <ion-col *ngFor="let post of userPosts" size="12" sizeMd="6" sizeLg="4">
         <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">
           <ion-card-header>
             <ion-grid>

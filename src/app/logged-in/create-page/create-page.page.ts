@@ -19,6 +19,49 @@ export class CreatePagePage implements OnInit {
  // const [presentAlert] = useIonAlert();
 
   ngOnInit() {
+
+
+ // Definering til preview af formular/post
+ const form = document.getElementById('myForm') as HTMLFormElement;
+ const titleInput = form.querySelector('#titleInput') as HTMLInputElement;
+ const bodyInput = form.querySelector('#bodyInput') as HTMLTextAreaElement;
+ const imageInput = form.querySelector('#imageInput') as HTMLInputElement;
+ const categoryInput = form.querySelector('#categoryInput') as HTMLSelectElement;
+ const preview = document.getElementById('preview') as HTMLDivElement;
+ const previewTitle = preview.querySelector('#previewTitle') as HTMLHeadingElement;
+ const previewBody = preview.querySelector('#previewBody') as HTMLParagraphElement;
+ const previewImage = preview.querySelector('#previewImage') as HTMLImageElement;
+ const previewCategory = preview.querySelector('#previewCategory') as HTMLSelectElement;
+ 
+ // Se efter changes i form fields
+ titleInput.addEventListener('input', updatePreview);
+ bodyInput.addEventListener('input', updatePreview);
+ imageInput.addEventListener('input', updatePreview);
+ categoryInput.addEventListener('input', updatePreview);
+ preview
+ 
+ function updatePreview() {
+   // Hent værdier fra inputfelter
+   const title = titleInput.value;
+   const body = bodyInput.value;
+   const image = imageInput.files;
+   const category = categoryInput.value;
+ 
+   // Hvis ingen img er uploaded skip 
+   if (!image) return;
+   const firstFile = image[0];
+ 
+   // Lav objekt url til billede for at kunne vise i HTML
+   const objectURL = URL.createObjectURL(firstFile);
+ 
+   // Update preview til at vise de nye værdier, indsat i formularen
+   previewTitle.innerHTML = title;
+   previewBody.innerHTML = body;
+   previewImage.src = objectURL;
+   previewCategory.innerHTML = category;
+ }
+ ;
+
     this.getparamid = this.router.snapshot.paramMap.get('id');
     if(this.getparamid){
       this.service.getSinglePost(this.getparamid).subscribe((res)=>{
