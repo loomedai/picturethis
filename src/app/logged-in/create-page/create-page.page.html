@@ -18,7 +18,7 @@
       <ion-select-option value="EQUALITY">EQUALITY</ion-select-option>
     </ion-select>
 
-    <ion-title class="ion-no-padding">Image: </ion-title><input formControlName="img" type="file" id="imageInput" accept="image/png, image/jpg, image/jpeg, image/webp"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"><br><br>
+    <ion-title class="ion-no-padding">Image: </ion-title><input (change)="onFileChanged($event)" formControlName="img" type="file" id="imageInput" accept="image/png, image/jpg, image/jpeg, image/webp"class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"><br><br>
     <ion-title class="ion-no-padding">Title: </ion-title><ion-input formControlName="title" type="text" id="titleInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"></ion-input><br>
     <ion-title class="ion-no-padding">Description: </ion-title><ion-textarea formControlName="description" rows="6" id="bodyInput" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"></ion-textarea><br>
 

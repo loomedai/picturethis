@@ -1,28 +1,40 @@
-const express = require  ('express');
+
+const express = require('express');
 const bodyparser = require('body-parser');
 const cors = require('cors');
 const mysql = require('mysql2');
-
+const multer = require('multer');
+const fs = require('fs');
 
 const app = express();
-
 app.use(cors());
 app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({ extended: true }));
 
+  
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads/');
+    },
+    filename: function (req, file, cb) {
+      cb(null, file.originalname);
+    }
+  });
+  
+  const upload = multer({ storage: storage });
 
-
-// database connection
+// database connections
 
 const db = mysql.createConnection({
 
- //   host:'localhost',
- //   user:'root',
- //   password:'',
- //   database:'solutionsdb',
-      host:'remotemysql.com',
-      user: 'YV7hmbfNlq',
-      password: 'y14XO122ar',
-      database: 'YV7hmbfNlq',
+    host:'localhost',
+    user:'root',
+    password:'',
+    database:'solutionsdb',
+ //     host:'remotemysql.com',
+ //     user: 'YV7hmbfNlq',
+ //     password: 'y14XO122ar',
+ //     database: 'YV7hmbfNlq',
       port: 3306
 });
  
@@ -34,7 +46,7 @@ db.connect(err=>{
 })
 
 
-//get all data
+//get all datasX
 
 app.get('/posts',(req,res)=>{
 
@@ -166,7 +178,34 @@ app.get('/user/:id/posts',(req,res)=>{
     })
 })
 
+// image get
 
+app.get('/posts/:img',(req,res)=>{
+
+    let typeI = req.params.img;
+
+    let qry = `select * from posts where img = ${typeI}`;
+
+    db.query(qry,(err,result)=>{
+
+        if(err) {console.log(err);}
+
+        if(result.length>0)
+        {
+            res.send({
+                message: 'get single data from img',
+                data:result
+            });
+        }
+        else 
+        {
+            res.send({
+                message:'data not available'
+            });
+        }
+    })
+
+});
 
 // Update a single post. for update we use put
 app.put('/posts/:id',(req,res)=>{
@@ -210,6 +249,13 @@ app.delete('/posts/:id',(req,res)=>{
 
     });
 })
+app.post('/upload', upload.single('file'), (req, res) => {
+  console.log(req.file);
+  res.send({
+  message:"File uploaded successfully"
+  }
+  )
+});
 
 app.listen(3000,() => {
     console.log("Server is still running :");
