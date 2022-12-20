@@ -1,4 +1,4 @@
-<ion-grid class="mx-10">
+<ion-grid class="mx-10 ion-no-padding">
   <ion-row class="titlerow">
     <ion-col>
       <ion-title class="ion-text-center posttitle">Ideas & Posts</ion-title>
@@ -25,17 +25,17 @@
   </ion-row>
   <!--first post row-->
 
-  <ion-row class="flex flex-auto mx-24">
-    <ion-col *ngFor="let post of readData" size="12" size-lg="3">
-      <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">
-        <ion-card-header>
-          <ion-grid>
+  <ion-row class="flex flex-auto mx-24 ion-no-padding">
+    <ion-col class="ion-no-padding" *ngFor="let post of readData" size="12" size-lg="3">
+      <ion-card class="m-1 md:m-3 lg:m-4 shadow-2xl ion-no-padding ">
+        <ion-card-header class="ion-no-padding">
+          <ion-grid class="ion-no-padding">
             <ion-row>
               
-              <ion-col class="ion-align-self-center" size="10">
-                <ion-card-title><span class="text-base lg:text-lg">{{post.title}}</span>
+              <ion-col class=" ion-no-padding px-2" size="10">
+                <ion-card-title class="py-2"><span class="text-base lg:text-base">{{post.title}}</span>
 
-                  <ion-card-subtitle><span>John Doe - </span> <span> 03/03 13:48</span></ion-card-subtitle>
+                  <ion-card-subtitle class="py-1"><span>John Doe - </span> <span> 03/03 13:48</span></ion-card-subtitle>
 
                 </ion-card-title>
               </ion-col>
@@ -45,10 +45,10 @@
         <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
 
 
-        <ion-accordion-group>
-        <ion-accordion>
+        <ion-accordion-group class="ion-no-padding">
+        <ion-accordion class="ion-no-padding">
           
-          <ion-item slot="header">
+          <ion-item class="ion-no-padding px-2 " slot="header">
             <ion-label>Description</ion-label>
           </ion-item>
 
@@ -60,7 +60,7 @@
         </ion-accordion>
       </ion-accordion-group>
 
-      <ion-chip [disabled]="true">{{post.category}}</ion-chip>
+      <ion-chip class="ion-no-padding px-2" [disabled]="true">{{post.category}}</ion-chip>
       <!-- 
       <div class="number-display">
         <button class="font-semibold text-black" (click)="increment()"> Like </button>
