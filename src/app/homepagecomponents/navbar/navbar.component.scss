@@ -6,6 +6,12 @@ ion-toolbar {
       display: none;
     }
   }
+  @media screen and (max-width: 600px) {
+    ion-label {
+      display: none;
+    }
+  }
+  
 
 ion-button {
   --background: none;
