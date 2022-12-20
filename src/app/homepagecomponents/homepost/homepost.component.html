@@ -1,11 +1,11 @@
-<ion-grid>
+<ion-grid class="mx-10">
   <ion-row class="titlerow">
     <ion-col>
       <ion-title class="ion-text-center posttitle">Ideas & Posts</ion-title>
     </ion-col>
   </ion-row>
   <!--Buttons of UN world goals-->
-  <ion-row style="text-align:center" class="ion-justify-content-center ion-align-items-center md:px-10  mb-10">
+  <ion-row style="text-align:center" class="ion-justify-content-center ion-align-items-center flex flex-auto mx-4">
 
     <ion-col size="6" size-md="3">
       <ion-button class="lifeonland w-40 xl:w-52 lg:w-48 text-xs lg:text-sm">WATER & SANITATION</ion-button>
@@ -28,6 +28,8 @@
 
   <ion-row class=" md:px-10 lg:px-44">
     <ion-col *ngFor="let post of readData" size="12" sizeMd="6" sizeLg="3">
+  <ion-row class="flex flex-auto mx-24">
+    <ion-col *ngFor="let post of readData" size="12" size-lg="4">
       <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">
         <ion-card-header>
           <ion-grid>

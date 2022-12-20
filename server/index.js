@@ -46,7 +46,6 @@ app.get('/posts',(req,res)=>{
         {
             console.log(err,'errs')
         }
-
         if(result.length>0)
         {
             res.send({
@@ -54,7 +53,6 @@ app.get('/posts',(req,res)=>{
                 data:result
             })
         }
-
     });
 })
 
@@ -84,6 +82,7 @@ app.get('/posts/:id',(req,res)=>{
     })
 
 });
+
 // GET CATEGORY
 app.get('/posts/:category',(req,res)=>{
 

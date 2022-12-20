@@ -1,3 +1,4 @@
+
 @property --num {
   syntax: "<integer>";
   initial-value: 0;
@@ -14,9 +15,9 @@
 
 @keyframes counter {
   from {
-    --num: 9999;
+    --num: 0;
   }
   to {
-    --num: 10794;
+    --num: 23;
   }
 }

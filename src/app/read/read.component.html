@@ -1,7 +1,7 @@
 <ion-content>
     <section class=" bg-[url('./assets/img/readHeaderImg.jpg')] hero">
-      <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
-          <div class="mr-auto place-self-center lg:col-span-7">
+      <div class="grid max-w-screen-2xl py-8 lg:py-16 lg:grid-cols-12 m-auto">
+        <div class="mr-auto place-self-center lg:col-span-9">
               <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">Welcome to an
                 <span class="text-green-500">Ocean</span> of ideas
               </h1>
@@ -11,7 +11,7 @@
                   
               </ion-button>
           </div>
-          <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
+          <div class="hidden lg:mt-0 lg:col-span-3 lg:flex">
               <img src="./assets/img/Idea.png" alt="mockup">
           </div>                
       </div>
@@ -26,7 +26,7 @@
 
 <section class="bg-white">
     <div>
-        <div class="container mx-auto px-6 py-10">
+        <div class="container mx-auto py-10">
         <h1 class="text-center text-3xl font-bold capitalize text-black  lg:text-6xl">Our 
           <span class="text-red-800">Users</span> Mind
         </h1>
@@ -37,7 +37,7 @@
             <span class="inline-block h-1 w-1 rounded-full bg-green-500"></span>
         </div>
 
-        <p class="mx-auto mt-6 max-w-3xl text-center font-semibold text-black">
+        <p class="mt-6 font-semibold text-black break-all"> <!-- FJERN BREAK ALL HVIS TEKST SKAL ÆNDRES-->
           Have a look at all the wonderfull and helpfull ideas, our users
           come up with everyday. The Ideas can be used by everyone, to benefit
           the way we treat our earth and its inhabitants </p>
@@ -45,13 +45,12 @@
     </div>
 </section> 
 
-
-
-
   
 
 <ion-row  class="md:px-16 lg:px-52">
   <ion-col *ngFor="let post of readData" size="12" sizeMd="6" sizeLg="3">
+<ion-row  class="md:px-2 lg:px-36">
+  <ion-col *ngFor="let post of readData" size="12" sizeMd="6" sizeLg="4">
     <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">
       <ion-card-header>
         <ion-grid>
