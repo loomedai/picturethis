@@ -249,6 +249,7 @@ app.delete('/posts/:id',(req,res)=>{
 
     });
 })
+//image
 app.post('/upload', upload.single('file'), (req, res) => {
   console.log(req.file);
   res.send({
