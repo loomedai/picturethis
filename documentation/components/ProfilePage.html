@@ -1,0 +1,995 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>picturethis documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">picturethis documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li
+  >
+  ProfilePage</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/logged-in/profile-page/profile.page.ts</code>
+</p>
+
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-profile</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>profile.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>profile.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#auth" >auth</a>
+                            </li>
+                            <li>
+                                <a href="#counter" >counter</a>
+                            </li>
+                            <li>
+                                <a href="#readData" >readData</a>
+                            </li>
+                            <li>
+                                <a href="#successmsg" >successmsg</a>
+                            </li>
+                            <li>
+                                <a href="#user" >user</a>
+                            </li>
+                            <li>
+                                <a href="#userPosts" >userPosts</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#deleteID" >deleteID</a>
+                            </li>
+                            <li>
+                                <a href="#getAllData" >getAllData</a>
+                            </li>
+                            <li>
+                                <a href="#increment" >increment</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit" >ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(service: <a href="../injectables/ApiService.html" target="_self">ApiService</a>, auth: AuthService)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:16</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>service</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ApiService.html" target="_self" >ApiService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>auth</td>
+                                                  
+                                                        <td>
+                                                                    <code>AuthService</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="deleteID"></a>
+                    <span class="name">
+                        <span ><b>deleteID</b></span>
+                        <a href="#deleteID"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>deleteID(id: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:53</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getAllData"></a>
+                    <span class="name">
+                        <span ><b>getAllData</b></span>
+                        <a href="#getAllData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getAllData()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="increment"></a>
+                    <span class="name">
+                        <span ><b>increment</b></span>
+                        <a href="#increment"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>increment()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:22</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="auth"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>auth</b></span>
+                        <a href="#auth"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>    <code>AuthService</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="counter"></a>
+                    <span class="name">
+                        <span ><b>counter</b></span>
+                        <a href="#counter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="readData"></a>
+                    <span class="name">
+                        <span ><b>readData</b></span>
+                        <a href="#readData"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:13</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="successmsg"></a>
+                    <span class="name">
+                        <span ><b>successmsg</b></span>
+                        <a href="#successmsg"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:15</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="user"></a>
+                    <span class="name">
+                        <span ><b>user</b></span>
+                        <a href="#user"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="userPosts"></a>
+                    <span class="name">
+                        <span ><b>userPosts</b></span>
+                        <a href="#userPosts"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/logged-in/profile-page/profile.page.ts:14</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {ApiService } from &#x27;../../api/api.service&#x27;;
+import { AuthService } from &#x27;@auth0/auth0-angular&#x27;;
+
+@Component({
+  selector: &#x27;app-profile&#x27;,
+  templateUrl: &#x27;profile.page.html&#x27;,
+  styleUrls: [&#x27;profile.page.scss&#x27;],
+})
+
+export class ProfilePage implements OnInit {
+
+  readData:any;
+  userPosts:any;
+  successmsg:any;
+  user: any;
+
+  constructor(private service:ApiService, public auth: AuthService) {
+    this.user &#x3D; {};
+  }
+
+  ngOnInit(): void {
+    this.auth.user$.subscribe((success: any) &#x3D;&gt; {
+      this.user &#x3D; success;
+
+      console.log(success);
+      
+      
+        const uID &#x3D; success?.sub?.split(&#x27;|&#x27;)[1];
+        
+        this.service.getUserPosts(Number(uID)).subscribe((res)&#x3D;&gt;{
+          this.userPosts &#x3D; res.data;
+        });
+   
+    });
+
+    console.log(this.user);
+
+    this.service.getAllData().subscribe((res)&#x3D;&gt;{
+      
+      this.readData &#x3D; res.data;
+    });
+  }
+  counter &#x3D; 0;
+
+  increment() {
+    this.counter++;
+  }
+
+
+  //get delete id
+
+  deleteID(id:any)
+  {
+    
+    this.service.delete(id).subscribe((res)&#x3D;&gt;{
+      
+      this.successmsg &#x3D; res.message;
+      this.getAllData();
+
+    });
+  }
+
+  //get data
+
+  getAllData(){
+
+    this.service.getAllData().subscribe((res)&#x3D;&gt;{
+      
+      this.readData &#x3D; res.data;
+    });
+  }
+
+//  getUserPosts(){
+//    this.service.getUserPosts(11).subscribe((res)&#x3D;&gt;{
+      
+//      this.userPosts &#x3D; res.data;
+//    });
+//  }
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-content&gt;
+
+  &lt;ion-grid class&#x3D;&quot;ion-no-padding px-10 lg:px-26 xl:36&quot;&gt;
+    &lt;!--profile image. profile info and badges--&gt;
+    &lt;ion-row  class&#x3D;&quot;mt-10 lg:mt-32&quot;&gt;
+      &lt;ion-col size&#x3D;&quot;12&quot; size-lg&#x3D;&quot;4&quot; class&#x3D;&quot;pb-12 lg:pb-0&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex-col items-center&quot;&gt;
+        &lt;img class&#x3D;&quot;profileimg&quot; src&#x3D;&quot;https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;580&amp;q&#x3D;80&quot; alt&#x3D;&quot;Hans&quot; srcset&#x3D;&quot;&quot;&gt;
+        &lt;ion-button class&#x3D;&quot;mt-4&quot;&gt;Edit Profile&lt;/ion-button&gt;
+      &lt;/div&gt;
+      &lt;/ion-col&gt;
+
+      &lt;ion-col size&#x3D;&quot;12&quot; size-md&#x3D;&quot;6&quot; size-lg&#x3D;&quot;4&quot;&gt;
+       &lt;div class&#x3D;&quot;flex flex-col items-center lg:items-start py-5&quot;&gt;
+        &lt;ion-title class&#x3D;&quot;ion-no-padding &quot;&gt;Your Profile&lt;/ion-title&gt;
+        
+
+          &lt;div *ngIf&#x3D;&quot;auth.user$ | async as user&quot;&gt;
+            &lt;ion-card-subtitle&gt;Name&lt;/ion-card-subtitle&gt;
+          &lt;p&gt;{{ user.nickname }}&lt;/p&gt;
+          &lt;ion-card-subtitle&gt;Email Adress&lt;/ion-card-subtitle&gt;
+          &lt;p&gt;j{{ user.email }}&lt;/p&gt;
+
+        &lt;/div&gt;
+       &lt;/div&gt;
+      &lt;/ion-col&gt;
+       
+      &lt;!--Badges--&gt;
+      &lt;ion-col size&#x3D;&quot;12&quot; size-md&#x3D;&quot;6&quot; size-lg&#x3D;&quot;4&quot; class&#x3D;&quot;&quot;&gt;
+        &lt;div class&#x3D;&quot;flex flex-col items-center lg:items-start py-5&quot;&gt;
+        &lt;ion-title class&#x3D;&quot;ion-no-padding&quot;&gt;Badges&lt;/ion-title&gt;
+
+        &lt;div class&#x3D;&quot;flex&quot;&gt;
+          &lt;div class&#x3D;&quot;pt-4 pr-2&quot;&gt;
+          &lt;img class&#x3D;&quot;badgeimg&quot; src&#x3D;&quot;https://images.unsplash.com/photo-1549849171-09f62448709e?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1170&amp;q&#x3D;80&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;&quot;&gt;
+         &lt;/div&gt;
+          &lt;div class&#x3D;&quot;flex flex-col items-center&quot;&gt;
+          &lt;p&gt;Post apprentice&lt;/p&gt;
+          &lt;ion-card-subtitle&gt;0/22&lt;/ion-card-subtitle&gt;
+          &lt;ion-progress-bar class&#x3D;&quot;pbar w-36&quot; value&#x3D;&quot;0&quot; &gt;&lt;/ion-progress-bar&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;pt-4 pl-2&quot;&gt;
+          &lt;img class&#x3D;&quot;badgeimg&quot; src&#x3D;&quot;https://images.unsplash.com/photo-1592484939110-1f2ea1820782?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;363&amp;q&#x3D;80&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;&quot;&gt;
+         &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;flex&quot;&gt;
+          &lt;div class&#x3D;&quot;pt-4 pr-2&quot;&gt;
+          &lt;img class&#x3D;&quot;badgeimg&quot; src&#x3D;&quot;https://images.unsplash.com/photo-1549849171-09f62448709e?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1170&amp;q&#x3D;80&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;&quot;&gt;
+         &lt;/div&gt;
+          &lt;div class&#x3D;&quot;flex flex-col items-center&quot;&gt;
+          &lt;p&gt;Share bear&lt;/p&gt;
+          &lt;ion-card-subtitle&gt;0/22&lt;/ion-card-subtitle&gt;
+          &lt;ion-progress-bar class&#x3D;&quot;pbar w-36&quot; value&#x3D;&quot;0&quot; &gt;&lt;/ion-progress-bar&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;pt-4 pl-2&quot;&gt;
+          &lt;img class&#x3D;&quot;badgeimg&quot; src&#x3D;&quot;https://images.unsplash.com/photo-1592484939110-1f2ea1820782?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;363&amp;q&#x3D;80&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;&quot;&gt;
+         &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;flex&quot;&gt;
+          &lt;div class&#x3D;&quot;pt-4 pr-2&quot;&gt;
+          &lt;img class&#x3D;&quot;badgeimg&quot; src&#x3D;&quot;https://images.unsplash.com/photo-1549849171-09f62448709e?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;1170&amp;q&#x3D;80&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;&quot;&gt;
+         &lt;/div&gt;
+          &lt;div class&#x3D;&quot;flex flex-col items-center&quot;&gt;
+          &lt;p&gt;Dead star fish&lt;/p&gt;
+          &lt;ion-card-subtitle&gt;0/22&lt;/ion-card-subtitle&gt;
+          &lt;ion-progress-bar class&#x3D;&quot;pbar w-36&quot; value&#x3D;&quot;0&quot; &gt;&lt;/ion-progress-bar&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;pt-4 pl-2&quot;&gt;
+          &lt;img class&#x3D;&quot;badgeimg&quot; src&#x3D;&quot;https://images.unsplash.com/photo-1592484939110-1f2ea1820782?ixlib&#x3D;rb-4.0.3&amp;ixid&#x3D;MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto&#x3D;format&amp;fit&#x3D;crop&amp;w&#x3D;363&amp;q&#x3D;80&quot; alt&#x3D;&quot;&quot; srcset&#x3D;&quot;&quot;&gt;
+         &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;/ion-col&gt;
+    &lt;/ion-row&gt;
+
+     &lt;!--Post--&gt;
+    &lt;div *ngIf&#x3D;&quot;successmsg&quot; class&#x3D;&quot;px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8&quot; type&#x3D;&quot;alert&quot;&gt;&lt;h3&gt;{{successmsg}}&lt;/h3&gt;
+    &lt;/div&gt;
+     &lt;ion-row class&#x3D;&quot; md:px-10 lg:px-30 xl:px-40 mt-8&quot;&gt;
+      &lt;ion-col *ngFor&#x3D;&quot;let post of userPosts&quot; size&#x3D;&quot;12&quot; sizeMd&#x3D;&quot;6&quot; sizeLg&#x3D;&quot;4&quot;&gt;
+        &lt;ion-card class&#x3D;&quot;m-4 md:m-8 lg:m-8 shadow-2xl&quot;&gt;
+          &lt;ion-card-header&gt;
+            &lt;ion-grid&gt;
+              &lt;ion-row&gt;
+                &lt;ion-col size&#x3D;&quot;12&quot; size-xl&#x3D;&quot;2&quot;&gt;
+                  &lt;img class&#x3D;&quot;&quot; /&gt;
+                &lt;/ion-col&gt;
+                &lt;ion-col class&#x3D;&quot;ion-align-self-center&quot; size&#x3D;&quot;10&quot;&gt;
+                  &lt;ion-card-title&gt;&lt;span class&#x3D;&quot;text-base lg:text-lg&quot;&gt;{{post.title}}&lt;/span&gt;
+
+                    &lt;ion-card-subtitle&gt;&lt;span&gt;John Doe - &lt;/span&gt; &lt;span&gt; 03/03 13:48&lt;/span&gt;&lt;/ion-card-subtitle&gt;
+
+                &lt;/ion-card-title&gt;
+              &lt;/ion-col&gt;
+            &lt;/ion-row&gt;
+          &lt;/ion-grid&gt;
+        &lt;/ion-card-header&gt;
+        &lt;img alt&#x3D;&quot;Silhouette of mountains&quot; src&#x3D;&quot;https://ionicframework.com/docs/img/demos/card-media.png&quot; /&gt;
+
+        &lt;ion-accordion-group&gt;
+          &lt;ion-accordion&gt;
+            &lt;ion-item slot&#x3D;&quot;header&quot;&gt;
+              &lt;ion-label&gt;Description&lt;/ion-label&gt;
+            &lt;/ion-item&gt;
+  
+            &lt;ion-list slot&#x3D;&quot;content&quot;&gt;
+              &lt;ion-item&gt; 
+                {{post.description}}
+              &lt;/ion-item&gt;
+            &lt;/ion-list&gt;
+          &lt;/ion-accordion&gt;
+        &lt;/ion-accordion-group&gt;
+
+
+        &lt;ion-chip [disabled]&#x3D;&quot;true&quot;&gt;{{post.category}}&lt;/ion-chip&gt;
+
+      &lt;div class&#x3D;&quot;number-display&quot;&gt;
+        &lt;button class&#x3D;&quot;font-semibold text-black&quot; (click)&#x3D;&quot;increment()&quot;&gt; Like &lt;/button&gt;
+        &lt;ion-icon class&#x3D;&quot;pl-1&quot; color&#x3D;&quot;danger&quot; name&#x3D;&quot;heart&quot;&gt;&lt;/ion-icon&gt;
+        {{counter}}
+      &lt;/div&gt;
+
+    &lt;/ion-card&gt;
+
+    &lt;ion-item&gt;
+      &lt;ion-button [routerLink]&#x3D;&quot;[&#x27;/login/update&#x27;, post.id]&quot; color&#x3D;&quot;primary&quot;&gt;update&lt;/ion-button&gt;
+      &lt;ion-button color&#x3D;&quot;danger&quot; (click)&#x3D;&quot;deleteID(post.id)&quot; &gt;Delete post&lt;/ion-button&gt;  
+    &lt;/ion-item&gt;
+    &lt;/ion-col&gt;
+  &lt;/ion-row&gt;
+  &lt;/ion-grid&gt;
+&lt;/ion-content&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>profile.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">@media screen and (min-width: 992px) {
+    *{
+        //margin-top: 20px;
+    }
+}
+ion-title{
+    font-size: 48px;
+}
+.profileimg{
+    border-radius: 50% !important;
+    overflow: hidden;
+    width: 300px;   
+    height: 300px;
+}
+.pbar{
+    width: 50%;
+    align-items: center;
+}
+.badgeimg{
+    border-radius: 50% !important;
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+}
+
+@media only screen and (max-width: 600px) {
+    .titlerow {
+      padding-bottom: 5rem;
+      padding-top: 5rem;
+      
+    }
+    .posttitle{
+        font-size: 25px;
+    }
+    .text-xs{
+      font-size: 10px !important;
+    }
+    .profileimg{
+        width: 200px;
+        height: 200px;
+    }
+    ion-title{
+        font-size: 30px;
+    }
+  }
+ </code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-content>  <ion-grid class="ion-no-padding px-10 lg:px-26 xl:36">    <!--profile image. profile info and badges-->    <ion-row  class="mt-10 lg:mt-32">      <ion-col size="12" size-lg="4" class="pb-12 lg:pb-0">        <div class="flex flex-col items-center">        <img class="profileimg" src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80" alt="Hans" srcset="">        <ion-button class="mt-4">Edit Profile</ion-button>      </div>      </ion-col>      <ion-col size="12" size-md="6" size-lg="4">       <div class="flex flex-col items-center lg:items-start py-5">        <ion-title class="ion-no-padding ">Your Profile</ion-title>                  <div *ngIf="auth.user$ | async as user">            <ion-card-subtitle>Name</ion-card-subtitle>          <p>{{ user.nickname }}</p>          <ion-card-subtitle>Email Adress</ion-card-subtitle>          <p>j{{ user.email }}</p>        </div>       </div>      </ion-col>             <!--Badges-->      <ion-col size="12" size-md="6" size-lg="4" class="">        <div class="flex flex-col items-center lg:items-start py-5">        <ion-title class="ion-no-padding">Badges</ion-title>        <div class="flex">          <div class="pt-4 pr-2">          <img class="badgeimg" src="https://images.unsplash.com/photo-1549849171-09f62448709e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" srcset="">         </div>          <div class="flex flex-col items-center">          <p>Post apprentice</p>          <ion-card-subtitle>0/22</ion-card-subtitle>          <ion-progress-bar class="pbar w-36" value="0" ></ion-progress-bar>        </div>        <div class="pt-4 pl-2">          <img class="badgeimg" src="https://images.unsplash.com/photo-1592484939110-1f2ea1820782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=363&q=80" alt="" srcset="">         </div>        </div>        <div class="flex">          <div class="pt-4 pr-2">          <img class="badgeimg" src="https://images.unsplash.com/photo-1549849171-09f62448709e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" srcset="">         </div>          <div class="flex flex-col items-center">          <p>Share bear</p>          <ion-card-subtitle>0/22</ion-card-subtitle>          <ion-progress-bar class="pbar w-36" value="0" ></ion-progress-bar>        </div>        <div class="pt-4 pl-2">          <img class="badgeimg" src="https://images.unsplash.com/photo-1592484939110-1f2ea1820782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=363&q=80" alt="" srcset="">         </div>        </div>        <div class="flex">          <div class="pt-4 pr-2">          <img class="badgeimg" src="https://images.unsplash.com/photo-1549849171-09f62448709e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="" srcset="">         </div>          <div class="flex flex-col items-center">          <p>Dead star fish</p>          <ion-card-subtitle>0/22</ion-card-subtitle>          <ion-progress-bar class="pbar w-36" value="0" ></ion-progress-bar>        </div>        <div class="pt-4 pl-2">          <img class="badgeimg" src="https://images.unsplash.com/photo-1592484939110-1f2ea1820782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=363&q=80" alt="" srcset="">         </div>        </div>      </div>      </ion-col>    </ion-row>     <!--Post-->    <div *ngIf="successmsg" class="px-7 mx-20 shadow bg-amber-200 animate-pulse w-80 h-8" type="alert"><h3>{{successmsg}}</h3>    </div>     <ion-row class=" md:px-10 lg:px-30 xl:px-40 mt-8">      <ion-col *ngFor="let post of userPosts" size="12" sizeMd="6" sizeLg="4">        <ion-card class="m-4 md:m-8 lg:m-8 shadow-2xl">          <ion-card-header>            <ion-grid>              <ion-row>                <ion-col size="12" size-xl="2">                  <img class="" />                </ion-col>                <ion-col class="ion-align-self-center" size="10">                  <ion-card-title><span class="text-base lg:text-lg">{{post.title}}</span>                    <ion-card-subtitle><span>John Doe - </span> <span> 03/03 13:48</span></ion-card-subtitle>                </ion-card-title>              </ion-col>            </ion-row>          </ion-grid>        </ion-card-header>        <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />        <ion-accordion-group>          <ion-accordion>            <ion-item slot="header">              <ion-label>Description</ion-label>            </ion-item>              <ion-list slot="content">              <ion-item>                 {{post.description}}              </ion-item>            </ion-list>          </ion-accordion>        </ion-accordion-group>        <ion-chip [disabled]="true">{{post.category}}</ion-chip>      <div class="number-display">        <button class="font-semibold text-black" (click)="increment()"> Like </button>        <ion-icon class="pl-1" color="danger" name="heart"></ion-icon>        {{counter}}      </div>    </ion-card>    <ion-item>      <ion-button [routerLink]="[\'/login/update\', post.id]" color="primary">update</ion-button>      <ion-button color="danger" (click)="deleteID(post.id)" >Delete post</ion-button>      </ion-item>    </ion-col>  </ion-row>  </ion-grid></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CookieComponent', 'selector': 'app-cookie'},{'name': 'CreatePagePage', 'selector': 'app-create-page'},{'name': 'CreatepostComponent', 'selector': 'app-createpost'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'FavoritePagePage', 'selector': 'app-favorite-page'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'HeroheaderComponent', 'selector': 'app-heroheader'},{'name': 'HomepostComponent', 'selector': 'app-homepost'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PostPagePage', 'selector': 'app-post-page'},{'name': 'ProfilePage', 'selector': 'app-profile'},{'name': 'ReadComponent', 'selector': 'app-read'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'TabsLoggedInPage', 'selector': 'app-tabs-logged-in'},{'name': 'TabsPage', 'selector': 'app-tabs'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ProfilePage'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ProfilePage.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
