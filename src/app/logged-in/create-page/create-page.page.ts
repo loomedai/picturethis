@@ -3,21 +3,26 @@ import {ApiService} from '../../api/api.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import { AlertController } from '@ionic/angular';
 import {ActivatedRoute} from '@angular/router';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-create-page',
   templateUrl: './create-page.page.html',
   styleUrls: ['./create-page.page.scss'],
 })
 export class CreatePagePage implements OnInit {
-
-  constructor(private service:ApiService, alertcontroller:AlertController, private router:ActivatedRoute) { }
+  selectedFile: File | null = null;
+  constructor(private http: HttpClient, private service:ApiService, alertcontroller:AlertController, private router:ActivatedRoute) { }
   errormsg:any;
   successmsg:any;
   getparamid:any
+  
 
- // const [presentAlert] = useIonAlert();
-
+    // Called when the file input changes
+    onFileChanged(event:any) {
+      this.selectedFile = event.target.files[0];
+    }
+  
+    
   ngOnInit() {
 
 
@@ -93,9 +98,17 @@ export class CreatePagePage implements OnInit {
        console.log(res, 'res==>'); 
        this.postForm.reset();
        this.successmsg = res.message;
-       window.location.reload();
-      });
+      // window.location.reload();
+      const uploadData = new FormData();
+      if (this.selectedFile) {
+        uploadData.append('file', this.selectedFile, this.selectedFile.name);
       
+      }
+  
+      this.http.post("http://localhost:3000/upload", uploadData).subscribe(response => {
+        console.log(response);
+      });
+      });
     }
     else{
      this.errormsg = 'All fields must be filled'
