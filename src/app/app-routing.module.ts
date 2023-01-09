@@ -23,7 +23,7 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./logged-in/tabs-logged-in/tabs-logged-in.module').then( m => m.TabsLoggedInPageModule),
-    canActivate: [AuthGuard],
+    canActivate: [],
   },
 
 

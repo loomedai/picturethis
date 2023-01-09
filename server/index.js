@@ -42,7 +42,7 @@ const db = mysql.createConnection({
 
 db.connect(err=>{
     if (err){console.log(err,'dberr');}
-    console.log('YV7hmbfNlq is connected');
+    console.log('GSdatabase is connected');
 })
 
 
