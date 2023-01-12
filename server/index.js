@@ -54,8 +54,7 @@ app.get('/posts',(req,res)=>{
 
     db.query(qry,(err,result)=>{
 
-        if(err)
-        {
+        if(err) {
             console.log(err,'errs')
         }
         if(result.length>0)
@@ -78,21 +77,18 @@ app.get('/posts/:id',(req,res)=>{
 
         if(err) {console.log(err);}
 
-        if(result.length>0)
-        {
+        if(result.length>0) {
             res.send({
                 message: 'get single data from id',
                 data:result
             });
         }
-        else 
-        {
+        else {
             res.send({
                 message:'data not available'
             });
         }
     })
-
 });
 
 // GET CATEGORY
