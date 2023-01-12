@@ -21,7 +21,6 @@ export class ApiService {
   //create post
 
   CreateData(data:any):Observable<any>{
-
     console.log(data,'createapi=>')
   return this._http.post(`${this.apiUrl}`,data);
 }
@@ -36,24 +35,21 @@ export class ApiService {
 
   //Delete post
 
-delete(id:any):Observable<any>
-{
+delete(id:any):Observable<any>{
   let ids = id;
   return this._http.delete(`${this.apiUrl}/${ids}`)
 }
 
 //update data
 
-updateData(data:any,id:any):Observable<any>
-{
+updateData(data:any,id:any):Observable<any>{
   let ids = id;
   return this._http.put(`${this.apiUrl}/${ids}`,data);
 }
 
 
 // get singe post
-getSinglePost(id:any):Observable<any>
-{
+getSinglePost(id:any):Observable<any>{
   let ids = id;
   return this._http.get(`${this.apiUrl}/${ids}`);
 }
