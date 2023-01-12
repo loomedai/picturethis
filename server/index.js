@@ -35,7 +35,7 @@ const db = mysql.createConnection({
  //     user: 'YV7hmbfNlq',
  //     password: 'y14XO122ar',
  //     database: 'YV7hmbfNlq',
-      port: 3306
+      port: 3308
 });
  
 // check database connection 
